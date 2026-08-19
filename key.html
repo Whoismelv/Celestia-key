@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CELESTIA — Access</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, #1c0f22 0%, #0a0f1a 55%, #05070d 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f4f4f4;
+    overflow: hidden;
+  }
+  .card {
+    width: min(420px, 92vw);
+    background: rgba(13, 20, 34, 0.85);
+    border: 1px solid rgba(236, 72, 153, 0.35);
+    border-radius: 18px;
+    padding: 40px 34px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+    animation: rise .55s cubic-bezier(.2,.9,.3,1.2) both;
+  }
+  @keyframes rise { from { transform: translateY(24px) scale(.96); opacity: 0 } to { transform: none; opacity: 1 } }
+  .logo {
+    font-size: 26px; font-weight: 800; letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff96b4, #ec4899 55%, #db2777);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { font-size: 11px; letter-spacing: 4px; color: #90a0bf; margin-top: 4px; text-transform: uppercase; }
+  .icon-wrap { width: 84px; height: 84px; margin: 26px auto 18px; position: relative; }
+  .ring {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 3px solid rgba(236,72,153,.25);
+    border-top-color: #ec4899;
+    animation: spin 1s linear infinite;
+  }
+  .ring.done { animation: none; border: 3px solid #3dbb4a; }
+  .check {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-size: 34px; color: #3dbb4a; opacity: 0; transform: scale(.4);
+    transition: all .35s cubic-bezier(.2,.9,.3,1.4);
+  }
+  .check.show { opacity: 1; transform: scale(1); }
+  @keyframes spin { to { transform: rotate(360deg) } }
+  h1 { font-size: 18px; font-weight: 700; }
+  .status { margin-top: 10px; font-size: 13px; color: #a6b4cf; line-height: 1.6; }
+  .status b { color: #ff96b4; font-weight: 600; }
+  .bar { margin: 24px auto 0; width: 200px; height: 4px; border-radius: 99px; background: rgba(255,255,255,.08); overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg,#ec4899,#ff96b4); transition: width .4s ease; }
+  .foot { margin-top: 22px; font-size: 10px; color: #5b6b8c; letter-spacing: 1px; }
+  .err { color: #d94141; font-size: 13px; margin-top: 12px; line-height: 1.6; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">CELESTIA</div>
+    <div class="sub">Premium Script Hub</div>
+
+    <div class="icon-wrap">
+      <div class="ring" id="ring"></div>
+      <div class="check" id="check">&#10003;</div>
+    </div>
+
+    <h1 id="title">SAVING ACCESS...</h1>
+    <div class="status" id="status">
+      Completing your session — <b>return to Roblox</b>, the script will unlock automatically.
+    </div>
+    <div class="bar"><i id="fill"></i></div>
+    <div class="err hidden" id="err"></div>
+    <div class="foot">CELESTIA STUDIOS &middot; WORK.INK</div>
+  </div>
+
+<script>
+(function () {
+  var SUPABASE_URL = "https://plxfneehxhjqhpxlzmui.supabase.co";
+  var SUPABASE_KEY = "sb_publishable_YAAFdXYlvP2qBi6CciiKgg_Q9f7gTP2";
+  var params = new URLSearchParams(location.search);
+  var uid = params.get("uid");
+  var hash = params.get("hash") || "";
+
+  var title = document.getElementById("title");
+  var status = document.getElementById("status");
+  var ring = document.getElementById("ring");
+  var check = document.getElementById("check");
+  var fill = document.getElementById("fill");
+  var errBox = document.getElementById("err");
+
+  function done() {
+    ring.classList.add("done");
+    check.classList.add("show");
+    title.textContent = "ACCESS GRANTED";
+    status.innerHTML = "Session saved for <b>24 hours</b>. Go back to Roblox now.";
+    fill.style.width = "100%";
+  }
+
+  function fail(msg) {
+    ring.classList.add("done");
+    ring.style.borderColor = "#d94141";
+    ring.style.borderTopColor = "#d94141";
+    title.textContent = "ERROR";
+    errBox.textContent = msg;
+    errBox.classList.remove("hidden");
+  }
+
+  if (!uid) {
+    fail("Missing user ID. Open this page through the script link (work.ink).");
+    return;
+  }
+
+  var body = { uid: uid };
+  if (hash && hash !== "") body.hash = hash;
+
+  fetch(SUPABASE_URL + "/rest/v1/sessions?on_conflict=uid", {
+    method: "POST",
+    headers: {
+      "apikey": SUPABASE_KEY,
+      "Authorization": "Bearer " + SUPABASE_KEY,
+      "Content-Type": "application/json",
+      "Prefer": "resolution=merge-duplicates"
+    },
+    body: JSON.stringify(body)
+  })
+  .then(function (r) {
+    fill.style.width = "60%";
+    if (r.status >= 200 && r.status < 300) {
+      done();
+    } else {
+      return r.text().then(function (t) { throw new Error(t || ("HTTP " + r.status)); });
+    }
+  })
+  .catch(function (e) {
+    fail("Could not save your session. Re-open the link and try again. (" + e.message + ")");
+  });
+})();
+</script>
+</body>
+</html>
