@@ -74,7 +74,7 @@
     </div>
     <div class="bar"><i id="fill"></i></div>
     <div class="err hidden" id="err"></div>
-    <div class="foot">CELESTIA STUDIOS &middot; WORK.INK</div>
+    <div class="foot">CELESTIA STUDIOS &middot; justlink</div>
   </div>
 
 <script>
@@ -116,6 +116,7 @@
 
   var body = { uid: uid };
   if (hash && hash !== "") body.hash = hash;
+  body.expires_at = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
 
   fetch(SUPABASE_URL + "/rest/v1/sessions?on_conflict=uid", {
     method: "POST",
