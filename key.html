@@ -74,7 +74,7 @@
     </div>
     <div class="bar"><i id="fill"></i></div>
     <div class="err hidden" id="err"></div>
-    <div class="foot">CELESTIA STUDIOS &middot; justlink</div>
+    <div class="foot">CELESTIA STUDIOS &middot; LINKJUST</div>
   </div>
 
 <script>
@@ -114,27 +114,30 @@
     return;
   }
 
-  var body = { uid: uid };
-  if (hash && hash !== "") body.hash = hash;
-  body.expires_at = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+  // Ask the server-side edge function to create the session (uses the
+  // service role key internally). The anon key never writes to the table.
+  var body = {
+    action: "create",
+    uid: uid,
+    hash: (hash && hash !== "") ? hash : ""
+  };
 
-  fetch(SUPABASE_URL + "/rest/v1/sessions?on_conflict=uid", {
+  fetch(SUPABASE_URL + "/functions/v1/verify-session", {
     method: "POST",
     headers: {
-      "apikey": SUPABASE_KEY,
-      "Authorization": "Bearer " + SUPABASE_KEY,
-      "Content-Type": "application/json",
-      "Prefer": "resolution=merge-duplicates"
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(body)
   })
   .then(function (r) {
     fill.style.width = "60%";
-    if (r.status >= 200 && r.status < 300) {
-      done();
-    } else {
-      return r.text().then(function (t) { throw new Error(t || ("HTTP " + r.status)); });
-    }
+    return r.json().then(function (j) {
+      if (j && j.ok === true) {
+        done();
+      } else {
+        throw new Error((j && j.err) || ("HTTP " + r.status));
+      }
+    });
   })
   .catch(function (e) {
     fail("Could not save your session. Re-open the link and try again. (" + e.message + ")");
