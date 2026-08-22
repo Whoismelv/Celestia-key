@@ -84,6 +84,14 @@
   var params = new URLSearchParams(location.search);
   var uid = params.get("uid");
   var hash = params.get("hash") || "";
+  if (!uid) {
+    var h = location.hash.replace(/^#/, "");
+    if (h) {
+      var hparams = new URLSearchParams(h);
+      uid = hparams.get("uid");
+      hash = hparams.get("hash") || hash;
+    }
+  }
 
   var title = document.getElementById("title");
   var status = document.getElementById("status");
