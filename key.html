@@ -117,39 +117,40 @@
     errBox.classList.remove("hidden");
   }
 
-  if (!uid) {
-    fail("Missing user ID. Open this page through the script link (work.ink).");
-    return;
-  }
+  // If the script passed uid/hash, ask the edge function to create the
+  // session. If not (LinkJust strips the params), the script creates it
+  // itself — this page is just a confirmation screen.
+  if (uid) {
+    var body = {
+      action: "create",
+      uid: uid,
+      hash: (hash && hash !== "") ? hash : ""
+    };
 
-  // Ask the server-side edge function to create the session (uses the
-  // service role key internally). The anon key never writes to the table.
-  var body = {
-    action: "create",
-    uid: uid,
-    hash: (hash && hash !== "") ? hash : ""
-  };
-
-  fetch(SUPABASE_URL + "/functions/v1/verify-session", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(body)
-  })
-  .then(function (r) {
-    fill.style.width = "60%";
-    return r.json().then(function (j) {
-      if (j && j.ok === true) {
-        done();
-      } else {
-        throw new Error((j && j.err) || ("HTTP " + r.status));
-      }
+    fetch(SUPABASE_URL + "/functions/v1/verify-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+    .then(function (r) {
+      fill.style.width = "60%";
+      return r.json().then(function (j) {
+        if (j && j.ok === true) {
+          done();
+        } else {
+          throw new Error((j && j.err) || ("HTTP " + r.status));
+        }
+      });
+    })
+    .catch(function (e) {
+      fail("Could not save your session. Re-open the link and try again. (" + e.message + ")");
     });
-  })
-  .catch(function (e) {
-    fail("Could not save your session. Re-open the link and try again. (" + e.message + ")");
-  });
+  } else {
+    // No uid on this URL — the script creates the session itself.
+    done();
+  }
 })();
 </script>
 </body>
