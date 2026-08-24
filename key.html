@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CELESTIA — Access</title>
+<title>CELESTIA &middot; Your Key</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -17,7 +17,7 @@
     overflow: hidden;
   }
   .card {
-    width: min(420px, 92vw);
+    width: min(440px, 92vw);
     background: rgba(13, 20, 34, 0.85);
     border: 1px solid rgba(236, 72, 153, 0.35);
     border-radius: 18px;
@@ -41,6 +41,7 @@
     animation: spin 1s linear infinite;
   }
   .ring.done { animation: none; border: 3px solid #3dbb4a; }
+  .ring.err { animation: none; border: 3px solid #d94141; }
   .check {
     position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
     font-size: 34px; color: #3dbb4a; opacity: 0; transform: scale(.4);
@@ -51,11 +52,43 @@
   h1 { font-size: 18px; font-weight: 700; }
   .status { margin-top: 10px; font-size: 13px; color: #a6b4cf; line-height: 1.6; }
   .status b { color: #ff96b4; font-weight: 600; }
-  .bar { margin: 24px auto 0; width: 200px; height: 4px; border-radius: 99px; background: rgba(255,255,255,.08); overflow: hidden; }
-  .bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg,#ec4899,#ff96b4); transition: width .4s ease; }
+  .key-box {
+    margin: 24px auto 0;
+    padding: 18px 16px;
+    background: rgba(4, 10, 18, 0.75);
+    border: 1px dashed rgba(236, 72, 153, 0.55);
+    border-radius: 12px;
+    font-family: "Cascadia Code", Consolas, monospace;
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: #ff96b4;
+    user-select: all;
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  .copy-btn {
+    margin-top: 16px;
+    padding: 13px 0;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(90deg, #db2777, #ec4899);
+    transition: transform .12s ease, filter .2s ease;
+  }
+  .copy-btn:hover { filter: brightness(1.1); }
+  .copy-btn:active { transform: scale(.97); }
+  .copy-btn.copied { background: linear-gradient(90deg, #2f9e44, #3dbb4a); }
+  .expiry { margin-top: 18px; font-size: 12px; color: #90a0bf; }
+  .expiry b { color: #ffd166; }
   .foot { margin-top: 22px; font-size: 10px; color: #5b6b8c; letter-spacing: 1px; }
   .err { color: #d94141; font-size: 13px; margin-top: 12px; line-height: 1.6; }
   .hidden { display: none; }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(236,72,153,.3); border-top-color: #ec4899; border-radius: 50%; vertical-align: -2px; margin-right: 8px; animation: spin .8s linear infinite; }
 </style>
 </head>
 <body>
@@ -68,11 +101,13 @@
       <div class="check" id="check">&#10003;</div>
     </div>
 
-    <h1 id="title">SAVING ACCESS...</h1>
+    <h1 id="title">PREPARING YOUR KEY...</h1>
     <div class="status" id="status">
-      Completing your session — <b>return to Roblox</b>, the script will unlock automatically.
+      <span class="spinner"></span>Minting a private access key.
     </div>
-    <div class="bar"><i id="fill"></i></div>
+    <div class="key-box hidden" id="keyBox"></div>
+    <button class="copy-btn hidden" id="copyBtn">COPY KEY</button>
+    <div class="expiry hidden" id="expiry"></div>
     <div class="err hidden" id="err"></div>
     <div class="foot">CELESTIA STUDIOS &middot; WORK.INK</div>
   </div>
@@ -80,77 +115,89 @@
 <script>
 (function () {
   var SUPABASE_URL = "https://plxfneehxhjqhpxlzmui.supabase.co";
-  var SUPABASE_KEY = "sb_publishable_YAAFdXYlvP2qBi6CciiKgg_Q9f7gTP2";
-  var params = new URLSearchParams(location.search);
-  var uid = params.get("uid");
-  var hash = params.get("hash") || "";
-  if (!uid) {
-    var h = location.hash.replace(/^#/, "");
-    if (h) {
-      var hparams = new URLSearchParams(h);
-      uid = hparams.get("uid");
-      hash = hparams.get("hash") || hash;
-    }
-  }
+  var FN = SUPABASE_URL + "/functions/v1/verify-session";
 
   var title = document.getElementById("title");
   var status = document.getElementById("status");
   var ring = document.getElementById("ring");
   var check = document.getElementById("check");
-  var fill = document.getElementById("fill");
+  var keyBox = document.getElementById("keyBox");
+  var copyBtn = document.getElementById("copyBtn");
+  var expiry = document.getElementById("expiry");
   var errBox = document.getElementById("err");
 
-  function done() {
+  function showKey(key, expiresAt) {
+    ring.classList.remove("err");
     ring.classList.add("done");
     check.classList.add("show");
-    title.textContent = "ACCESS GRANTED";
-    status.innerHTML = "Session saved for <b>24 hours</b>. Go back to Roblox now.";
-    fill.style.width = "100%";
+    title.textContent = "YOUR ACCESS KEY";
+    status.innerHTML = "Paste this key into the script, then press <b>REDEEM</b>.";
+    keyBox.textContent = key;
+    keyBox.classList.remove("hidden");
+    copyBtn.classList.remove("hidden");
+    var hours = 24;
+    if (expiresAt) {
+      var diff = new Date(expiresAt).getTime() - Date.now();
+      if (diff > 0) hours = Math.max(1, Math.round(diff / 3600000));
+    }
+    expiry.innerHTML = "Valid for <b>~" + hours + " hours</b> &middot; one-time use";
+    expiry.classList.remove("hidden");
   }
 
   function fail(msg) {
-    ring.classList.add("done");
-    ring.style.borderColor = "#d94141";
-    ring.style.borderTopColor = "#d94141";
-    title.textContent = "ERROR";
+    ring.classList.remove("done");
+    ring.classList.add("err");
+    title.textContent = "NO KEY AVAILABLE";
+    status.textContent = "";
     errBox.textContent = msg;
     errBox.classList.remove("hidden");
   }
 
-  // If the script passed uid/hash, ask the edge function to create the
-  // session. If not (LinkJust strips the params), the script creates it
-  // itself — this page is just a confirmation screen.
-  if (uid) {
-    var body = {
-      action: "create",
-      uid: uid,
-      hash: (hash && hash !== "") ? hash : ""
-    };
-
-    fetch(SUPABASE_URL + "/functions/v1/verify-session", {
+  function post(body) {
+    return fetch(FN, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body)
-    })
-    .then(function (r) {
-      fill.style.width = "60%";
-      return r.json().then(function (j) {
-        if (j && j.ok === true) {
-          done();
-        } else {
-          throw new Error((j && j.err) || ("HTTP " + r.status));
-        }
-      });
-    })
-    .catch(function (e) {
-      fail("Could not save your session. Re-open the link and try again. (" + e.message + ")");
-    });
-  } else {
-    // No uid on this URL — the script creates the session itself.
-    done();
+    }).then(function (r) { return r.json(); });
   }
+
+  // Step 1: ask the edge function which session just requested a key.
+  post({ action: "current" }).then(function (cur) {
+    if (!cur || cur.ok !== true || !cur.session_id) {
+      throw new Error("Open this link from the script first.");
+    }
+    // Step 2: mint a key bound to that session.
+    return post({ action: "genkey", session_id: cur.session_id }).then(function (g) {
+      if (!g || g.ok !== true || !g.key) {
+        throw new Error((g && g.err) || "Key generation failed.");
+      }
+      showKey(g.key, g.expires_at);
+    });
+  }).catch(function (e) {
+    fail((e && e.message) || "Could not generate a key. Re-open the link from the script.");
+  });
+
+  copyBtn.addEventListener("click", function () {
+    var txt = keyBox.textContent;
+    var done = false;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(function () { done = true; });
+    }
+    if (!done) {
+      var ta = document.createElement("textarea");
+      ta.value = txt;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    copyBtn.textContent = "COPIED!";
+    copyBtn.classList.add("copied");
+    setTimeout(function () {
+      copyBtn.textContent = "COPY KEY";
+      copyBtn.classList.remove("copied");
+    }, 1600);
+  });
 })();
 </script>
 </body>
