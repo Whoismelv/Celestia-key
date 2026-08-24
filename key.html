@@ -109,7 +109,7 @@
     <button class="copy-btn hidden" id="copyBtn">COPY KEY</button>
     <div class="expiry hidden" id="expiry"></div>
     <div class="err hidden" id="err"></div>
-    <div class="foot">CELESTIA STUDIOS &middot; WORK.INK</div>
+    <div class="foot">CELESTIA STUDIOS &middot; LINKVERTISE</div>
   </div>
 
 <script>
@@ -125,6 +125,24 @@
   var copyBtn = document.getElementById("copyBtn");
   var expiry = document.getElementById("expiry");
   var errBox = document.getElementById("err");
+
+  // Only allow the page to mint a key when it was reached through the
+  // shortened link (Linkvertise). If someone opens key.html directly, the
+  // referrer is empty / not Linkvertise -> refuse.
+  var ref = document.referrer || "";
+  var viaLink = ref.indexOf("direct-link.net") !== -1 ||
+                ref.indexOf("linkvertise") !== -1 ||
+                ref.indexOf("loot-link") !== -1 ||
+                ref.indexOf("work.ink") !== -1 ||
+                ref.indexOf("lootlink") !== -1;
+  if (!viaLink) {
+    ring.classList.add("err");
+    title.textContent = "NO KEY AVAILABLE";
+    status.textContent = "";
+    errBox.textContent = "Open this page from the script link. Direct access is not allowed.";
+    errBox.classList.remove("hidden");
+    return;
+  }
 
   function showKey(key, expiresAt) {
     ring.classList.remove("err");
