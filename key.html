@@ -8,13 +8,13 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: "Segoe UI", system-ui, sans-serif;
-    background: radial-gradient(1200px 600px at 50% -10%, #1c0f22 0%, #0a0f1a 55%, #05070d 100%);
+    background: radial-gradient(1200px 600px at 50% -10%, #1c0f22 0%, #0a0f1a 55%, #05070d 100%) fixed;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #f4f4f4;
-    overflow: hidden;
+    padding: 24px 12px;
   }
   .card {
     width: min(440px, 92vw);
@@ -105,12 +105,6 @@
     <div class="status" id="status">
       <span class="spinner"></span>Minting a private access key.
     </div>
-    <div id="askBox" style="display:none; margin:10px 0;">
-      <div style="color:#9fb4d0; font-size:13px; margin-bottom:8px;">Type the <b>6-character code</b> shown in the script:</div>
-      <input id="ucode" type="text" maxlength="6" autocomplete="off" spellcheck="false"
-             style="width:100%; box-sizing:border-box; padding:10px 12px; border-radius:8px; border:1px solid #2a3a55; background:#0a1220; color:#eef5ff; font-size:20px; letter-spacing:6px; text-align:center; text-transform:uppercase;" />
-      <button id="goBtn" style="margin-top:8px; width:100%; padding:10px 0; border:0; border-radius:8px; background:#e2447f; color:#fff; font-weight:700; cursor:pointer;">GET MY KEY</button>
-    </div>
     <div class="key-box hidden" id="keyBox"></div>
     <button class="copy-btn hidden" id="copyBtn">COPY KEY</button>
     <div class="expiry hidden" id="expiry"></div>
@@ -185,59 +179,28 @@
     }).then(function (r) { return r.json(); });
   }
 
-  var ucode = document.getElementById("ucode");
-  var goBtn = document.getElementById("goBtn");
-  var askBox = document.getElementById("askBox");
-
-  function askCode() {
-    title.textContent = "ONE LAST STEP";
-    status.textContent = "";
-    askBox.style.display = "block";
-    ucode.focus();
-  }
-
-  function tryGen(code, attempt) {
-    return post({ action: "genkey", code: code }).then(function (g) {
-      if (g && g.ok === true && g.key) return g;
-      if (g && g.err === "early" && attempt < 10) {
-        return new Promise(function (res) { setTimeout(res, 4000); }).then(function () {
-          return tryGen(code, attempt + 1);
-        });
-      }
-      if (g && g.err === "noclaim") {
-        throw new Error("No pending claim for this code. Press GET KEY in the script first.");
-      }
-      throw new Error((g && g.err) || "Key generation failed.");
-    });
-  }
-
-  function run(code) {
-    title.textContent = "PREPARING YOUR KEY...";
-    status.innerHTML = '<span class="spinner"></span>Minting a private access key.';
-    tryGen(code, 0).then(function (g) {
-      askBox.style.display = "none";
+  post({ action: "current" }).then(function (cur) {
+    if (!cur || cur.ok !== true || !cur.session_id) {
+      throw new Error("Open this link from the script first.");
+    }
+    // retry while inside the server-side link-countdown window
+    function tryGen(attempt) {
+      return post({ action: "genkey", session_id: cur.session_id }).then(function (g) {
+        if (g && g.ok === true && g.key) return g;
+        if (g && g.err === "early" && attempt < 10) {
+          return new Promise(function (res) { setTimeout(res, 4000); }).then(function () {
+            return tryGen(attempt + 1);
+          });
+        }
+        throw new Error((g && g.err) || "Key generation failed.");
+      });
+    }
+    return tryGen(0).then(function (g) {
       showKey(g.key, g.expires_at);
-    }).catch(function (e) {
-      var msg = (e && e.message) || "Could not generate a key. Re-open the link from the script.";
-      if (msg === "badcode") msg = "Wrong or expired code. Press OPEN LINK in the script for a new one.";
-      if (msg === "rate") msg = "Too many attempts. Wait a few minutes and retry.";
-      if (msg === "stale") msg = "Your claim expired. Press GET KEY in the script again.";
-      fail(msg);
-      askBox.style.display = "block";
     });
-  }
-
-  goBtn.addEventListener("click", function () {
-    var v = (ucode.value || "").trim().toUpperCase();
-    if (v.length !== 6) { ucode.focus(); return; }
-    goBtn.disabled = true;
-    run(v);
+  }).catch(function (e) {
+    fail((e && e.message) || "Could not generate a key. Re-open the link from the script.");
   });
-  ucode.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") goBtn.click();
-  });
-
-  askCode();
 
   copyBtn.addEventListener("click", function () {
     var txt = keyBox.textContent;
