@@ -126,9 +126,7 @@
   var expiry = document.getElementById("expiry");
   var errBox = document.getElementById("err");
 
-  // Only allow the page to mint a key when it was reached through the
-  // shortened link (Linkvertise). If someone opens key.html directly, the
-  // referrer is empty / not Linkvertise -> refuse.
+  // mint only when reached through the shortened link (referrer check)
   var ref = document.referrer || "";
   var viaLink = ref.indexOf("direct-link.net") !== -1 ||
                 ref.indexOf("linkvertise") !== -1 ||
@@ -181,13 +179,11 @@
     }).then(function (r) { return r.json(); });
   }
 
-  // Step 1: ask the edge function which session just requested a key.
   post({ action: "current" }).then(function (cur) {
     if (!cur || cur.ok !== true || !cur.session_id) {
       throw new Error("Open this link from the script first.");
     }
-    // Step 2: mint a key bound to that session (retry while inside the
-    // server-side link-countdown window).
+    // retry while inside the server-side link-countdown window
     function tryGen(attempt) {
       return post({ action: "genkey", session_id: cur.session_id }).then(function (g) {
         if (g && g.ok === true && g.key) return g;
