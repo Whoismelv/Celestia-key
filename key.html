@@ -186,11 +186,20 @@
     if (!cur || cur.ok !== true || !cur.session_id) {
       throw new Error("Open this link from the script first.");
     }
-    // Step 2: mint a key bound to that session.
-    return post({ action: "genkey", session_id: cur.session_id }).then(function (g) {
-      if (!g || g.ok !== true || !g.key) {
+    // Step 2: mint a key bound to that session (retry while inside the
+    // server-side link-countdown window).
+    function tryGen(attempt) {
+      return post({ action: "genkey", session_id: cur.session_id }).then(function (g) {
+        if (g && g.ok === true && g.key) return g;
+        if (g && g.err === "early" && attempt < 10) {
+          return new Promise(function (res) { setTimeout(res, 4000); }).then(function () {
+            return tryGen(attempt + 1);
+          });
+        }
         throw new Error((g && g.err) || "Key generation failed.");
-      }
+      });
+    }
+    return tryGen(0).then(function (g) {
       showKey(g.key, g.expires_at);
     });
   }).catch(function (e) {
