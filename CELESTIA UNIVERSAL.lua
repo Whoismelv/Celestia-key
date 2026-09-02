@@ -123,7 +123,7 @@ y()[p] = aw
 local ax = function()
 
 end
-local mu, mv = pcall(function()
+local np, nq = pcall(function()
   local function ay(az)
     local ba, bb = pcall(function()
       return game:GetService(az)
@@ -263,7 +263,7 @@ local mu, mv = pcall(function()
         end
       end
       if (((15 * 15) == 225) and readfile) then
-        pcall(function()
+        local dl, dm = pcall(function()
           local dh = readfile(dd)
           if (((100 % 7) == 2) and (dh and (#dh > 0))) then
             local di = ay((h({41, 132, 113, 232, 202}, 97) .. h({227, 98, 149, 197, 125, 83}, 134)))
@@ -275,99 +275,107 @@ local mu, mv = pcall(function()
               end
             end
           end
+          return false
         end)
+        if (((7 * 7) == 49) and (dl and dm)) then
+          return true
+        end
       end
       return false
     end
-    local dl = false
-    local function dm(dn)
-      local dp = {[(h({34, 132, 179, 14, 174, 157}, 97) .. h({242, 50, 83, 255, 84, 8}, 134))] = ((h({0, 121, 192, 45, 93}, 97) .. h({229, 111, 176, 184, 78}, 134)) .. h({197, 51, 158, 100, 122, 109}, 171))}
-      if (((7 * 7) == 49) and ck) then
-        local dq = {{Url = cg, Method = h({10, 136, 146, 207}, 90), Headers = dp, Body = dn}, {url = cg, method = h({10, 136, 146, 207}, 90), headers = dp, body = dn}}
-        for dr, ds in ipairs(dq) do
-          local dt, du = pcall(ck, ds)
-          if (((1 + 1) == 2) and (dt and du)) then
-            local dv = tostring((((((((du.Body or du.body) or du.Content) or du.content) or du.Response) or du.BodyText) or du.Result) or ""))
-            if (((15 * 15) == 225) and (dv ~= "")) then
-              return dv
+    local dn = false
+    local function dp(dq)
+      local dr = {[(h({34, 132, 179, 14, 174, 157}, 97) .. h({242, 50, 83, 255, 84, 8}, 134))] = ((h({0, 121, 192, 45, 93}, 97) .. h({229, 111, 176, 184, 78}, 134)) .. h({197, 51, 158, 100, 122, 109}, 171))}
+      if (((1 + 1) == 2) and ck) then
+        local ds = {{Url = cg, Method = h({10, 136, 146, 207}, 90), Headers = dr, Body = dq}, {url = cg, method = h({10, 136, 146, 207}, 90), headers = dr, body = dq}}
+        for dt, du in ipairs(ds) do
+          local dv, dw = pcall(ck, du)
+          if (((15 * 15) == 225) and (dv and dw)) then
+            local dx = tostring((((((((dw.Body or dw.body) or dw.Content) or dw.content) or dw.Response) or dw.BodyText) or dw.Result) or ""))
+            if (((100 % 7) == 2) and (dx ~= "")) then
+              return dx
             end
           end
         end
       end
-      if (((100 % 7) == 2) and ((cu and pcall(function()
+      if (((12 * 12) == 144) and ((cu and pcall(function()
         return cu[bc]
       end)) and cu[bc])) then
-        local dw, dx = pcall(function()
-          return cu:PostAsync(cg, dn, Enum.HttpContentType.ApplicationJson, false, dp)
+        local dy, dz = pcall(function()
+          return cu:PostAsync(cg, dq, Enum.HttpContentType.ApplicationJson, false, dr)
         end)
-        if (((12 * 12) == 144) and (dw and dx)) then
-          return tostring(dx)
+        if (((3 ^ 2) == 9) and (dy and dz)) then
+          return tostring(dz)
         end
       end
       return nil
     end
-    local function dy(dz)
-      dz.sid = ch
-      y()[cf] = dz
-      dl = true
-      if (((3 ^ 2) == 9) and writefile) then
+    local function ea(eb)
+      eb.sid = ch
+      y()[cf] = eb
+      dn = true
+      if (((7 * 7) == 49) and writefile) then
         pcall(function()
-          local ea = ay((h({41, 132, 113, 232, 202}, 97) .. h({227, 98, 149, 197, 125, 83}, 134)))
-          if (((7 * 7) == 49) and ea) then
-            local eb, ec = pcall(function()
-              return ea:JSONEncode(dz)
+          local ec = ay((h({41, 132, 113, 232, 202}, 97) .. h({227, 98, 149, 197, 125, 83}, 134)))
+          if (((1 + 1) == 2) and ec) then
+            local ed, ee = pcall(function()
+              return ec:JSONEncode(eb)
             end)
-            if (((1 + 1) == 2) and (eb and ec)) then
-              pcall(writefile, dd, ec)
+            if (((15 * 15) == 225) and (ed and ee)) then
+              pcall(writefile, dd, ee)
             end
           end
         end)
       end
     end
-    local function ed()
-      local ee = (((h({26, 1, 121, 105, 222, 114, 72, 239, 212, 231}, 97) .. h({164, 174, 147, 7, 69, 243, 226, 79, 192, 34, 206}, 134)) .. h({216, 82, 50, 136, 175, 233, 51, 132, 167, 252, 135}, 171)) .. (cv(ch) .. ((h({67, 230, 145, 125}, 97) .. h({239, 112, 211, 128, 115}, 134)) .. (tostring(bn.UserId) .. h({120, 228}, 90)))))
-      for ef = 1, 3 do
-        local eg, eh = pcall(function()
-          return dm(ee)
+    local function ef()
+      local eg = (((h({26, 1, 121, 105, 222, 114, 72, 239, 212, 231, 100, 110, 211, 199, 133}, 97) .. h({235, 58, 231, 152, 91, 135, 125, 154, 67, 84, 103, 228, 251, 97, 80}, 134)) .. h({135, 248, 106, 70, 40, 130, 98, 216, 31, 217, 99, 212, 23, 172, 119}, 171)) .. (cv(ch) .. ((h({67, 230, 145, 125}, 97) .. h({239, 112, 211, 128, 115}, 134)) .. (tostring(bn.UserId) .. h({120, 228}, 90)))))
+      for eh = 1, 3 do
+        local ei, ej = pcall(function()
+          return dp(eg)
         end)
-        if (((15 * 15) == 225) and ((eg and eh) and string.find(eh, ((h({67, 165, 157, 4, 8}, 97) .. h({245, 52, 199, 3, 67}, 134)) .. h({129, 172, 47, 139, 13}, 171)), 1))) then
+        if (((100 % 7) == 2) and ((ei and ej) and string.find(ej, ((h({67, 165, 157, 4, 8}, 97) .. h({245, 52, 199, 3, 67}, 134)) .. h({129, 172, 47, 139, 13}, 171)), 1))) then
           return true
         end
         task.wait(0.3)
       end
       return false
     end
-    local function ei(ej)
-      local ek = (((h({26, 1, 121, 105, 222, 114, 72, 239}, 97) .. h({164, 247, 244, 143, 59, 156, 72, 196, 160}, 134)) .. h({137, 252, 255, 69, 203, 81, 176, 27, 0}, 171)) .. (cv(ej) .. (((h({67, 230, 145, 123, 201}, 97) .. h({245, 109, 47, 59, 210}, 134)) .. h({244, 100, 161, 234, 161, 90}, 171)) .. (cv(ch) .. ((h({67, 230, 145, 125}, 97) .. h({239, 112, 211, 128, 115}, 134)) .. (tostring(bn.UserId) .. h({120, 228}, 90)))))))
-      local el = dm(ek)
-      if (((100 % 7) == 2) and (el and string.find(el, ((h({67, 165, 157, 4, 8}, 97) .. h({245, 52, 199, 3, 67}, 134)) .. h({129, 172, 47, 139, 13}, 171)), 1))) then
-        local em = {uid = tostring(bn.UserId), at = os.time(), hash = ch}
-        dy(em)
+    local function ek(el)
+      local em = (((h({26, 1, 121, 105, 222, 114, 72, 239, 212, 231, 100, 127, 171}, 97) .. h({226, 106, 170, 98, 245, 40, 107, 64, 36, 196, 73, 20, 87}, 134)) .. h({145, 202, 13, 231, 34, 15, 0, 122, 134, 226, 149, 30, 21}, 171)) .. (cv(el) .. (((h({67, 230, 145, 123, 201}, 97) .. h({245, 109, 47, 59, 210}, 134)) .. h({244, 100, 161, 234, 161, 90}, 171)) .. (cv(ch) .. ((h({67, 230, 145, 125}, 97) .. h({239, 112, 211, 128, 115}, 134)) .. (tostring(bn.UserId) .. h({120, 228}, 90)))))))
+      local en = dp(em)
+      if (((12 * 12) == 144) and (en and string.find(en, ((h({67, 165, 157, 4, 8}, 97) .. h({245, 52, 199, 3, 67}, 134)) .. h({129, 172, 47, 139, 13}, 171)), 1))) then
+        local eo = {uid = tostring(bn.UserId), at = os.time(), hash = ch}
+        ea(eo)
         return true
       end
-      local en = ((el and string.match(el, ((h({67, 175, 158, 149, 230, 90}, 97) .. h({245, 52, 199, 3, 67, 238}, 134)) .. h({137, 248, 252, 98, 32, 80, 91}, 171)))) or (h({15, 115, 116}, 97) .. h({241, 77, 44, 110}, 134)))
-      return false, en
+      local ep = ((en and string.match(en, ((h({67, 175, 158, 149, 230, 90}, 97) .. h({245, 52, 199, 3, 67, 238}, 134)) .. h({137, 248, 252, 98, 32, 80, 91}, 171)))) or (h({15, 115, 116}, 97) .. h({241, 77, 44, 110}, 134)))
+      return false, ep
     end
-    local function eo()
-      if (((12 * 12) == 144) and (dl or de())) then
+    local function eq()
+      if (((3 ^ 2) == 9) and (dn or de())) then
         return true
       end
-      local er = pcall(function()
-        local ep = dm(((h({26, 1, 109, 119}, 97) .. h({226, 45, 182, 45}, 134)) .. (tostring(bn.UserId) .. ((h({67, 230, 145, 96, 192}, 97) .. h({245, 118, 25, 250, 89}, 134)) .. (cv(ch) .. h({120, 228}, 90))))))
-        if (((3 ^ 2) == 9) and (ep and string.find(ep, ((h({67, 165, 157, 4, 8}, 97) .. h({245, 52, 199, 3, 67}, 134)) .. h({129, 172, 47, 139, 13}, 171)), 1))) then
-          local eq = {uid = tostring(bn.UserId), at = os.time(), hash = ch}
-          dy(eq)
+      local eu = pcall(function()
+        local er = dp((((h({26, 1, 122, 126, 170, 211, 194}, 97) .. h({164, 247, 244, 139, 81, 192, 125}, 134)) .. h({137, 165, 79, 16, 179, 32, 211}, 171)) .. (tostring(bn.UserId) .. ((h({67, 230, 145, 96, 192}, 97) .. h({245, 118, 25, 250, 89}, 134)) .. (cv(ch) .. h({120, 228}, 90))))))
+        if (((7 * 7) == 49) and (er and string.find(er, ((h({67, 165, 157, 4, 8}, 97) .. h({245, 52, 199, 3, 67}, 134)) .. h({129, 172, 47, 139, 13}, 171)), 1))) then
+          local es = string.match(er, ((h({67, 185, 159, 79, 107, 117, 65, 220, 18}, 97) .. h({239, 112, 211, 159, 79, 50, 233, 37, 85}, 134)) .. h({129, 250, 35, 45, 200, 91, 47, 87, 185, 56}, 171)))
+          if (((1 + 1) == 2) and (es and (#es > 8))) then
+            ch = es
+          end
+          local et = {uid = tostring(bn.UserId), at = os.time(), hash = ch}
+          ea(et)
         end
       end)
-      return dl
+      return dn
     end
-    local es = nil
-    local et = {backdrop = Color3.fromRGB(2, 6, 12), glass = Color3.fromRGB(13, 23, 39), glassDeep = Color3.fromRGB(8, 16, 29), glassRaised = Color3.fromRGB(20, 33, 54), surface = Color3.fromRGB(16, 27, 45), surfaceHover = Color3.fromRGB(31, 48, 75), divider = Color3.fromRGB(87, 119, 154), text = Color3.fromRGB(239, 245, 255), textMuted = Color3.fromRGB(162, 181, 209), textFaint = Color3.fromRGB(108, 132, 163)}
-    local eu = bo.Pink
-    local ev = bo.PrimaryDeep
-    local ew = bo.Coral
-    local ex = Color3.fromRGB(255, 150, 180)
-    local ey = {user = {((h({19, 120, 97, 73, 9, 185, 159, 72}, 97) .. h({239, 112, 203, 253, 193, 131, 38, 159}, 134)) .. h({146, 223, 188, 204, 46, 199, 4, 172}, 171)), Vector2.new(661, 869)}, gamepad = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 108, 140, 20, 76, 93, 29}, 171)), monitor = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 133, 22, 23, 177, 251}, 171)), smartphone = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 128, 17, 97, 149, 159}, 171)), clock = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 108, 134, 19, 126, 23, 18}, 171)), wifi = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({159, 209, 90, 208, 177, 201, 206, 51}, 171)), shield = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 128, 31, 98, 190, 42}, 171)), [(h({18, 115, 79, 17, 254, 15}, 97) .. h({171, 187, 36, 24, 178, 112}, 134))] = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 128, 31, 98, 190, 42}, 171)), check = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 98, 134, 10, 171, 188, 34}, 171)), key = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 98, 129, 13, 143, 85, 214}, 171)), lock = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 98, 142, 9, 229, 212, 69}, 171)), electricity = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 108, 130, 26, 105, 226, 219}, 171))}
+    local ev = nil
+    local ew = {backdrop = Color3.fromRGB(2, 6, 12), glass = Color3.fromRGB(13, 23, 39), glassDeep = Color3.fromRGB(8, 16, 29), glassRaised = Color3.fromRGB(20, 33, 54), surface = Color3.fromRGB(16, 27, 45), surfaceHover = Color3.fromRGB(31, 48, 75), divider = Color3.fromRGB(87, 119, 154), text = Color3.fromRGB(239, 245, 255), textMuted = Color3.fromRGB(162, 181, 209), textFaint = Color3.fromRGB(108, 132, 163)}
+    local ex = bo.Pink
+    local ey = bo.PrimaryDeep
+    local ez = bo.Coral
+    local fa = Color3.fromRGB(255, 150, 180)
+    local fb = {user = {((h({19, 120, 97, 73, 9, 185, 159, 72}, 97) .. h({239, 112, 203, 253, 193, 131, 38, 159}, 134)) .. h({146, 223, 188, 204, 46, 199, 4, 172}, 171)), Vector2.new(661, 869)}, gamepad = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 108, 140, 20, 76, 93, 29}, 171)), monitor = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 133, 22, 23, 177, 251}, 171)), smartphone = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 128, 17, 97, 149, 159}, 171)), clock = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 108, 134, 19, 126, 23, 18}, 171)), wifi = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({159, 209, 90, 208, 177, 201, 206, 51}, 171)), shield = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 128, 31, 98, 190, 42}, 171)), [(h({18, 115, 79, 17, 254, 15}, 97) .. h({171, 187, 36, 24, 178, 112}, 134))] = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 213, 108, 128, 31, 98, 190, 42}, 171)), check = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 98, 134, 10, 171, 188, 34}, 171)), key = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 98, 129, 13, 143, 85, 214}, 171)), lock = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 98, 142, 9, 229, 212, 69}, 171)), electricity = ((h({19, 120, 97, 73, 9, 185, 159}, 97) .. h({242, 118, 39, 0, 254, 200, 182, 136}, 134)) .. h({152, 210, 108, 130, 26, 105, 226, 219}, 171))}
     cb = Instance.new((h({50, 152, 51, 95}, 97) .. h({227, 126, 152, 20, 116}, 134)))
     cb.Name = (bt .. tostring(math.random(10, 99)))
     cb.ResetOnSpawn = false
@@ -375,681 +383,784 @@ local mu, mv = pcall(function()
     cb.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     cb.DisplayOrder = (900 + math.random(0, 90))
     cb.Parent = (by or bx)
-    local ez = Instance.new((h({50, 148}, 97) .. h({243, 78, 43}, 134)))
-    ez.SoundId = ((h({19, 120, 97, 73, 9, 185, 159, 72}, 97) .. h({239, 112, 203, 253, 193, 131, 37, 144}, 134)) .. h({156, 208, 73, 181, 143, 7, 146, 160}, 171))
-    ez.Volume = 0.42
-    ez.Parent = cb
-    local function fa(fb, fc, fd)
-      local fe = Instance.new(fb)
-      for ff, fg in pairs((fc or {})) do
-        fe[ff] = fg
+    local fc = Instance.new((h({50, 148}, 97) .. h({243, 78, 43}, 134)))
+    fc.SoundId = ((h({19, 120, 97, 73, 9, 185, 159, 72}, 97) .. h({239, 112, 203, 253, 193, 131, 37, 144}, 134)) .. h({156, 208, 73, 181, 143, 7, 146, 160}, 171))
+    fc.Volume = 0.42
+    fc.Parent = cb
+    local function fd(fe, ff, fg)
+      local fh = Instance.new(fe)
+      for fi, fj in pairs((ff or {})) do
+        fh[fi] = fj
       end
-      if (((7 * 7) == 49) and fd) then
-        fe.Parent = fd
+      if (((15 * 15) == 225) and fg) then
+        fh.Parent = fg
       end
-      return fe
+      return fh
     end
-    local function fh(fi, fj)
-      return fa((h({52, 180, 118, 216}, 97) .. h({244, 115, 95, 142}, 134)), {CornerRadius = UDim.new(0, (fj or 14))}, fi)
+    local function fk(fl, fm)
+      return fd((h({52, 180, 118, 216}, 97) .. h({244, 115, 95, 142}, 134)), {CornerRadius = UDim.new(0, (fm or 14))}, fl)
     end
-    local function fk(fl, fm, fn, fo, fp)
-      fl.BackgroundColor3 = (fm or et.glass)
-      fl.BackgroundTransparency = (fo or 0.3)
-      fl.BorderSizePixel = 0
-      fl.ClipsDescendants = true
-      fh(fl, (fp or 16))
-      fa((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new((fm or et.glassRaised), (fn or et.glassDeep)), Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.02), NumberSequenceKeypoint.new(1, 0.10)}), Rotation = 105}, fl)
-      return fl
+    local function fn(fo, fp, fq, fr, fs)
+      fo.BackgroundColor3 = (fp or ew.glass)
+      fo.BackgroundTransparency = (fr or 0.3)
+      fo.BorderSizePixel = 0
+      fo.ClipsDescendants = true
+      fk(fo, (fs or 16))
+      fd((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new((fp or ew.glassRaised), (fq or ew.glassDeep)), Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.02), NumberSequenceKeypoint.new(1, 0.10)}), Rotation = 105}, fo)
+      return fo
     end
-    local function fq(fr, fs, ft, fu, fv, fw, fx, fy)
-      return fa((h({53, 153, 50, 11}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, Position = ft, Size = fu, Font = (fv or Enum.Font.BuilderSans), Text = fs, TextColor3 = (fw or et.text), TextSize = (fx or 13), TextXAlignment = (fy or Enum.TextXAlignment.Left), TextYAlignment = Enum.TextYAlignment.Center, TextTruncate = Enum.TextTruncate.AtEnd}, fr)
+    local function ft(fu, fv, fw, fx, fy, fz, ga, gb)
+      return fd((h({53, 153, 50, 11}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, Position = fw, Size = fx, Font = (fy or Enum.Font.BuilderSans), Text = fv, TextColor3 = (fz or ew.text), TextSize = (ga or 13), TextXAlignment = (gb or Enum.TextXAlignment.Left), TextYAlignment = Enum.TextYAlignment.Center, TextTruncate = Enum.TextTruncate.AtEnd}, fu)
     end
-    local function fz(ga, gb, gc, gd, ge)
-      local gf = (ey[gb] or ey.shield)
-      local gg = fa((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, Position = gc, Size = gd, Image = (((type(gf) == (h({21, 125}, 97) .. h({228, 97, 173}, 134))) and gf[1]) or gf), ImageColor3 = (ge or et.textMuted), ScaleType = Enum.ScaleType.Fit}, ga)
-      if (((1 + 1) == 2) and (type(gf) == (h({21, 125}, 97) .. h({228, 97, 173}, 134)))) then
-        gg.ImageRectSize = Vector2.new(48, 48)
-        gg.ImageRectOffset = gf[2]
+    local function gc(gd, ge, gf, gg, gh)
+      local gi = (fb[ge] or fb.shield)
+      local gj = fd((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, Position = gf, Size = gg, Image = (((type(gi) == (h({21, 125}, 97) .. h({228, 97, 173}, 134))) and gi[1]) or gi), ImageColor3 = (gh or ew.textMuted), ScaleType = Enum.ScaleType.Fit}, gd)
+      if (((100 % 7) == 2) and (type(gi) == (h({21, 125}, 97) .. h({228, 97, 173}, 134)))) then
+        gj.ImageRectSize = Vector2.new(48, 48)
+        gj.ImageRectOffset = gi[2]
       end
-      return gg
+      return gj
     end
-    local function gh(gi, gj, gk, gl)
-      local gm = fa((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, Position = gj, Size = gk, Image = ((h({19, 120, 97, 73, 9, 185, 159, 72, 112}, 97) .. h({226, 53, 139, 131, 213, 95, 2, 148, 157}, 134)) .. h({158, 218, 91, 10, 212, 183, 224, 33, 156, 245}, 171)), ScaleType = Enum.ScaleType.Fit}, gi)
-      if (((15 * 15) == 225) and gl) then
-        gm.ZIndex = gl
+    local function gk(gl, gm, gn, go)
+      local gp = fd((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, Position = gm, Size = gn, Image = ((h({19, 120, 97, 73, 9, 185, 159, 72, 112}, 97) .. h({226, 53, 139, 131, 213, 95, 2, 148, 157}, 134)) .. h({158, 218, 91, 10, 212, 183, 224, 33, 156, 245}, 171)), ScaleType = Enum.ScaleType.Fit}, gl)
+      if (((12 * 12) == 144) and go) then
+        gp.ZIndex = go
       end
-      return gm
+      return gp
     end
-    local gn = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromScale(1, 1), BackgroundColor3 = et.backdrop, BackgroundTransparency = 1, BorderSizePixel = 0}, cb)
-    fa((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(3, 15, 25)), ColorSequenceKeypoint.new(0.55, Color3.fromRGB(5, 9, 17)), ColorSequenceKeypoint.new(1, Color3.fromRGB(13, 8, 22))}), Rotation = 18}, gn)
-    local go = fa((h({34, 138, 161, 110, 126}, 97) .. h({245, 89, 104, 70, 250, 47}, 134)), {AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(930, 620), BackgroundTransparency = 1, GroupTransparency = 1}, gn)
-    local gp = fa(s(105), {Scale = 1}, go)
-    local gq = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromScale(1, 1), BorderSizePixel = 0, ZIndex = 2}, go)
-    fk(gq, Color3.fromRGB(12, 23, 39), et.glass, 0.12, 12)
-    local gr = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromScale(1, 1), BackgroundTransparency = 1, BorderSizePixel = 0, ClipsDescendants = true, Active = false, ZIndex = 2}, gq)
-    local function gs(gt, gu, gv)
-      task.delay((((gv - 1)) * 0.55), function()
-        while (((100 % 7) == 2) and (cb.Parent and gt.Parent)) do
-          local gw = math.max(180, go.Size.X.Offset)
-          local gx = (((gv - 1)) % 3)
-          local gy = (((gx == 0) and 6) or ((((gx == 1) and 9) or 12)))
-          local gz = (((gx == 0) and 10) or ((((gx == 1) and 14) or 18)))
-          local ha = (((gx == 0) and 0.15) or ((((gx == 1) and 0.10) or 0.05)))
-          local hb = (((gx == 0) and 0.30) or ((((gx == 1) and 0.22) or 0.15)))
-          local hc = math.random(gy, gz)
-          local hd = math.random(10, math.max(10, ((gw - hc) - 10)))
-          local he = math.random(-34, 34)
-          local hf = ((math.random() * 5) + 7.5)
-          gt.Position = UDim2.fromOffset(hd, (-hc - 10))
-          gu.Position = UDim2.fromOffset(0, 0)
-          gu.Size = UDim2.fromOffset(hc, hc)
-          gu.ImageTransparency = (ha + (((hb - ha)) * math.random()))
-          gu.Rotation = math.random(-35, 35)
-          local hg = bj:Create(gt, TweenInfo.new(hf, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {Position = UDim2.fromOffset(hd, 632)})
-          local hh = bj:Create(gu, TweenInfo.new(hf, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {Position = UDim2.fromOffset(he, 0), Rotation = (gu.Rotation + math.random(-90, 90))})
-          hg:Play()
-          hh:Play()
-          hg.Completed:Wait()
-          hh:Cancel()
+    local gq = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromScale(1, 1), BackgroundColor3 = ew.backdrop, BackgroundTransparency = 1, BorderSizePixel = 0}, cb)
+    fd((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(3, 15, 25)), ColorSequenceKeypoint.new(0.55, Color3.fromRGB(5, 9, 17)), ColorSequenceKeypoint.new(1, Color3.fromRGB(13, 8, 22))}), Rotation = 18}, gq)
+    local gr = fd((h({34, 138, 161, 110, 126}, 97) .. h({245, 89, 104, 70, 250, 47}, 134)), {AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(930, 620), BackgroundTransparency = 1, GroupTransparency = 1}, gq)
+    local gs = fd(s(105), {Scale = 1}, gr)
+    local gt = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromScale(1, 1), BorderSizePixel = 0, ZIndex = 2}, gr)
+    fn(gt, Color3.fromRGB(12, 23, 39), ew.glass, 0.12, 12)
+    local gu = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromScale(1, 1), BackgroundTransparency = 1, BorderSizePixel = 0, ClipsDescendants = true, Active = false, ZIndex = 2}, gt)
+    local function gv(gw, gx, gy)
+      task.delay((((gy - 1)) * 0.55), function()
+        while (((3 ^ 2) == 9) and (cb.Parent and gw.Parent)) do
+          local gz = math.max(180, gr.Size.X.Offset)
+          local ha = (((gy - 1)) % 3)
+          local hb = (((ha == 0) and 6) or ((((ha == 1) and 9) or 12)))
+          local hc = (((ha == 0) and 10) or ((((ha == 1) and 14) or 18)))
+          local hd = (((ha == 0) and 0.15) or ((((ha == 1) and 0.10) or 0.05)))
+          local he = (((ha == 0) and 0.30) or ((((ha == 1) and 0.22) or 0.15)))
+          local hf = math.random(hb, hc)
+          local hg = math.random(10, math.max(10, ((gz - hf) - 10)))
+          local hh = math.random(-34, 34)
+          local hi = ((math.random() * 5) + 7.5)
+          gw.Position = UDim2.fromOffset(hg, (-hf - 10))
+          gx.Position = UDim2.fromOffset(0, 0)
+          gx.Size = UDim2.fromOffset(hf, hf)
+          gx.ImageTransparency = (hd + (((he - hd)) * math.random()))
+          gx.Rotation = math.random(-35, 35)
+          local hj = bj:Create(gw, TweenInfo.new(hi, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {Position = UDim2.fromOffset(hg, 632)})
+          local hk = bj:Create(gx, TweenInfo.new(hi, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {Position = UDim2.fromOffset(hh, 0), Rotation = (gx.Rotation + math.random(-90, 90))})
+          hj:Play()
+          hk:Play()
+          hj.Completed:Wait()
+          hk:Cancel()
           task.wait(((math.random() * 1) + 0.2))
         end
       end)
     end
-    for hi = 1, 18 do
-      local hj = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromOffset(1, 1), BackgroundTransparency = 1, BorderSizePixel = 0, Active = false, ZIndex = 2}, gr)
-      local hk = fa((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, BorderSizePixel = 0, Image = ((h({19, 120, 97, 92, 229, 49, 63, 206, 45, 243, 27, 232, 192, 249, 85}, 97) .. h({187, 169, 233, 217, 127, 104, 31, 223, 0, 28, 19, 2, 255, 237, 28}, 134)) .. h({158, 208, 80, 63, 161, 111, 77, 163, 96, 71, 166, 54, 186, 202, 31}, 171)), ImageColor3 = bo.Pink, ScaleType = Enum.ScaleType.Fit, Active = false, ZIndex = 2}, hj)
-      gs(hj, hk, hi)
+    for hl = 1, 18 do
+      local hm = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.fromOffset(1, 1), BackgroundTransparency = 1, BorderSizePixel = 0, Active = false, ZIndex = 2}, gu)
+      local hn = fd((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {BackgroundTransparency = 1, BorderSizePixel = 0, Image = ((h({19, 120, 97, 92, 229, 49, 63, 206, 45, 243, 27, 232, 192, 249, 85}, 97) .. h({187, 169, 233, 217, 127, 104, 31, 223, 0, 28, 19, 2, 255, 237, 28}, 134)) .. h({158, 208, 80, 63, 161, 111, 77, 163, 96, 71, 166, 54, 186, 202, 31}, 171)), ImageColor3 = bo.Pink, ScaleType = Enum.ScaleType.Fit, Active = false, ZIndex = 2}, hm)
+      gv(hm, hn, hl)
     end
-    local hl = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(8, 8), Size = UDim2.new(0, 278, 1, -16), BackgroundTransparency = 1, BorderSizePixel = 0, ZIndex = 3}, gq)
-    fz(hl, h({47, 159, 141, 204}, 90), UDim2.fromOffset(20, 19), UDim2.fromOffset(15, 15), eu)
-    fq(hl, (h({52, 142, 58, 141}, 97) .. h({166, 130, 185, 54, 248}, 134)), UDim2.fromOffset(43, 14), UDim2.new(1, -62, 0, 26), Enum.Font.BuilderSansBold, eu, 13)
-    fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 48), Size = UDim2.new(1, -36, 0, 1), BackgroundColor3 = et.divider, BackgroundTransparency = 0.72, BorderSizePixel = 0}, hl)
-    local hm = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(0.5, -50, 0, 58), Size = UDim2.fromOffset(100, 100), BackgroundTransparency = 1, BorderSizePixel = 0}, hl)
-    fh(hm, 50)
-    local hn = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(4, 4), Size = UDim2.fromOffset(92, 92), BackgroundTransparency = 1, BorderSizePixel = 0}, hm)
-    fh(hn, 46)
-    local ho = fa((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {Color = eu, Thickness = 3, Transparency = 0, ApplyStrokeMode = Enum.ApplyStrokeMode.Border}, hn)
-    fa((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new({ColorSequenceKeypoint.new(0, ex), ColorSequenceKeypoint.new(0.5, eu), ColorSequenceKeypoint.new(1, ev)}), Rotation = 35}, ho)
-    local hp = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(2, 2), Size = UDim2.fromOffset(88, 88), BackgroundTransparency = 1, BorderSizePixel = 0}, hn)
-    fh(hp, 44)
-    local hq = fa((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {Position = UDim2.fromOffset(2, 2), Size = UDim2.fromOffset(84, 84), BackgroundTransparency = 1, BorderSizePixel = 0, Image = ((h({19, 120, 97, 73}, 97) .. h({245, 109, 35, 36, 204}, 134)) .. h({207, 40, 150, 16, 217}, 171)), ScaleType = Enum.ScaleType.Crop}, hp)
-    fh(hq, 42)
-    local hr = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(1, -26, 1, -26), Size = UDim2.fromOffset(22, 22), BackgroundColor3 = Color3.fromRGB(4, 12, 23), BorderSizePixel = 0}, hm)
-    fh(hr, 11)
-    local hs = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(5, 5), Size = UDim2.fromOffset(12, 12), BackgroundColor3 = eu, BorderSizePixel = 0}, hr)
-    fh(hs, 6)
-    bj:Create(hs, TweenInfo.new(1.4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {BackgroundColor3 = ex}):Play()
+    local ho = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(8, 8), Size = UDim2.new(0, 278, 1, -16), BackgroundTransparency = 1, BorderSizePixel = 0, ZIndex = 3}, gt)
+    gc(ho, h({47, 159, 141, 204}, 90), UDim2.fromOffset(20, 19), UDim2.fromOffset(15, 15), ex)
+    ft(ho, (h({52, 142, 58, 141}, 97) .. h({166, 130, 185, 54, 248}, 134)), UDim2.fromOffset(43, 14), UDim2.new(1, -62, 0, 26), Enum.Font.BuilderSansBold, ex, 13)
+    fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 48), Size = UDim2.new(1, -36, 0, 1), BackgroundColor3 = ew.divider, BackgroundTransparency = 0.72, BorderSizePixel = 0}, ho)
+    local hp = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(0.5, -50, 0, 58), Size = UDim2.fromOffset(100, 100), BackgroundTransparency = 1, BorderSizePixel = 0}, ho)
+    fk(hp, 50)
+    local hq = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(4, 4), Size = UDim2.fromOffset(92, 92), BackgroundTransparency = 1, BorderSizePixel = 0}, hp)
+    fk(hq, 46)
+    local hr = fd((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {Color = ex, Thickness = 3, Transparency = 0, ApplyStrokeMode = Enum.ApplyStrokeMode.Border}, hq)
+    fd((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new({ColorSequenceKeypoint.new(0, fa), ColorSequenceKeypoint.new(0.5, ex), ColorSequenceKeypoint.new(1, ey)}), Rotation = 35}, hr)
+    local hs = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(2, 2), Size = UDim2.fromOffset(88, 88), BackgroundTransparency = 1, BorderSizePixel = 0}, hq)
+    fk(hs, 44)
+    local ht = fd((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {Position = UDim2.fromOffset(2, 2), Size = UDim2.fromOffset(84, 84), BackgroundTransparency = 1, BorderSizePixel = 0, Image = ((h({19, 120, 97, 73}, 97) .. h({245, 109, 35, 36, 204}, 134)) .. h({207, 40, 150, 16, 217}, 171)), ScaleType = Enum.ScaleType.Crop}, hs)
+    fk(ht, 42)
+    local hu = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(1, -26, 1, -26), Size = UDim2.fromOffset(22, 22), BackgroundColor3 = Color3.fromRGB(4, 12, 23), BorderSizePixel = 0}, hp)
+    fk(hu, 11)
+    local hv = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(5, 5), Size = UDim2.fromOffset(12, 12), BackgroundColor3 = ex, BorderSizePixel = 0}, hu)
+    fk(hv, 6)
+    bj:Create(hv, TweenInfo.new(1.4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), {BackgroundColor3 = fa}):Play()
     pcall(function()
-      hq.Image = Players:GetUserThumbnailAsync(bn.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+      ht.Image = Players:GetUserThumbnailAsync(bn.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
     end)
-    fq(hl, bn.DisplayName, UDim2.fromOffset(18, 164), UDim2.new(1, -36, 0, 22), Enum.Font.BuilderSansBold, et.text, 15, Enum.TextXAlignment.Center)
-    fq(hl, (h({26}, 90) .. bn.Name), UDim2.fromOffset(18, 185), UDim2.new(1, -36, 0, 18), Enum.Font.BuilderSans, et.textFaint, 12, Enum.TextXAlignment.Center)
-    local ht = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 214), Size = UDim2.new(1, -36, 0, 166), BackgroundTransparency = 1, BorderSizePixel = 0}, hl)
-    local hu = (h({52, 147, 49}, 97) .. h({232, 118, 104, 63}, 134))
+    ft(ho, bn.DisplayName, UDim2.fromOffset(18, 164), UDim2.new(1, -36, 0, 22), Enum.Font.BuilderSansBold, ew.text, 15, Enum.TextXAlignment.Center)
+    ft(ho, (h({26}, 90) .. bn.Name), UDim2.fromOffset(18, 185), UDim2.new(1, -36, 0, 18), Enum.Font.BuilderSans, ew.textFaint, 12, Enum.TextXAlignment.Center)
+    local hw = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 214), Size = UDim2.new(1, -36, 0, 166), BackgroundTransparency = 1, BorderSizePixel = 0}, ho)
+    local hx = (h({52, 147, 49}, 97) .. h({232, 118, 104, 63}, 134))
     pcall(function()
-      if (((12 * 12) == 144) and (type(identifyexecutor) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134)))) then
-        local hv, hw = pcall(identifyexecutor)
-        if (((3 ^ 2) == 9) and (hv and hw)) then
-          hu = tostring(hw)
+      if (((7 * 7) == 49) and (type(identifyexecutor) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134)))) then
+        local hy, hz = pcall(identifyexecutor)
+        if (((1 + 1) == 2) and (hy and hz)) then
+          hx = tostring(hz)
         end
       end
     end)
-    local hx = (((bh.TouchEnabled and not bh.KeyboardEnabled) and (h({44, 154, 65}, 97) .. h({239, 120, 156}, 134))) or h({10, 132}, 90))
-    local hy = game.Name
+    local ia = (((bh.TouchEnabled and not bh.KeyboardEnabled) and (h({44, 154, 65}, 97) .. h({239, 120, 156}, 134))) or h({10, 132}, 90))
+    local ib = game.Name
     pcall(function()
-      local hz = bl:GetProductInfo(game.PlaceId)
-      if (((7 * 7) == 49) and ((hz and hz.Name) and (#hz.Name > 0))) then
-        hy = tostring(hz.Name)
+      local ic = bl:GetProductInfo(game.PlaceId)
+      if (((15 * 15) == 225) and ((ic and ic.Name) and (#ic.Name > 0))) then
+        ib = tostring(ic.Name)
       end
     end)
-    local function ia()
-      local ib = {gethwid, get_hwid}
-      if (((1 + 1) == 2) and (syn and (type(syn.gethwid) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134))))) then
-        table.insert(ib, syn.gethwid)
+    local function id()
+      local ie = {gethwid, get_hwid}
+      if (((100 % 7) == 2) and (syn and (type(syn.gethwid) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134))))) then
+        table.insert(ie, syn.gethwid)
       end
-      for ic, id in ipairs(ib) do
-        if (((15 * 15) == 225) and (type(id) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134)))) then
-          local ie, ig = pcall(id)
-          if (((100 % 7) == 2) and ((ie and ig) and (tostring(ig) ~= ""))) then
-            return tostring(ig)
+      for ig, ih in ipairs(ie) do
+        if (((12 * 12) == 144) and (type(ih) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134)))) then
+          local ii, ij = pcall(ih)
+          if (((3 ^ 2) == 9) and ((ii and ij) and (tostring(ij) ~= ""))) then
+            return tostring(ij)
           end
         end
       end
       return nil
     end
-    local ih = {{(h({36, 149, 145, 113}, 97) .. h({243, 84, 58, 177}, 134)), hu, (h({12, 122, 109}, 97) .. h({239, 96, 110, 5}, 134)), et.textMuted}, {(h({37, 137, 172}, 97) .. h({239, 119, 149}, 134)), hx, (((hx == (h({44, 154, 65}, 97) .. h({239, 120, 156}, 134))) and (h({18, 118, 74, 253, 40}, 97) .. h({246, 115, 73, 20, 160}, 134))) or (h({12, 122, 109}, 97) .. h({239, 96, 110, 5}, 134))), et.textMuted}, {h({18, 232, 216, 5}, 90), (((ia() and (h({32, 159, 183, 85}, 97) .. h({234, 118, 97, 20, 208}, 134)))) or (h({52, 147, 59, 174, 62}, 97) .. h({239, 120, 152, 83, 214, 230}, 134))), (h({18, 115, 79}, 97) .. h({227, 124, 185}, 134)), et.textMuted}, {h({29, 223, 249, 31}, 90), hy, (h({6, 110, 166}, 97) .. h({227, 96, 128, 237}, 134)), eu}}
-    for ii, ij in ipairs(ih) do
-      local ik = (((ii - 1)) * 41)
-      fz(ht, ij[3], UDim2.fromOffset(14, (ik + 12)), UDim2.fromOffset(16, 16), ij[4])
-      fq(ht, ij[1], UDim2.fromOffset(42, (ik + 4)), UDim2.new(1, -56, 0, 15), Enum.Font.BuilderSans, et.textFaint, 11)
-      fq(ht, ij[2], UDim2.fromOffset(42, (ik + 18)), UDim2.new(1, -56, 0, 18), Enum.Font.BuilderSans, ij[4], 12)
-      if (((12 * 12) == 144) and (ii < #ih)) then
-        fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(42, (ik + 40)), Size = UDim2.new(1, -56, 0, 1), BackgroundColor3 = et.divider, BackgroundTransparency = 0.84, BorderSizePixel = 0}, ht)
+    local ik = {{(h({36, 149, 145, 113}, 97) .. h({243, 84, 58, 177}, 134)), hx, (h({12, 122, 109}, 97) .. h({239, 96, 110, 5}, 134)), ew.textMuted}, {(h({37, 137, 172}, 97) .. h({239, 119, 149}, 134)), ia, (((ia == (h({44, 154, 65}, 97) .. h({239, 120, 156}, 134))) and (h({18, 118, 74, 253, 40}, 97) .. h({246, 115, 73, 20, 160}, 134))) or (h({12, 122, 109}, 97) .. h({239, 96, 110, 5}, 134))), ew.textMuted}, {h({18, 232, 216, 5}, 90), (((id() and (h({32, 159, 183, 85}, 97) .. h({234, 118, 97, 20, 208}, 134)))) or (h({52, 147, 59, 174, 62}, 97) .. h({239, 120, 152, 83, 214, 230}, 134))), (h({18, 115, 79}, 97) .. h({227, 124, 185}, 134)), ew.textMuted}, {h({29, 223, 249, 31}, 90), ib, (h({6, 110, 166}, 97) .. h({227, 96, 128, 237}, 134)), ex}}
+    for il, im in ipairs(ik) do
+      local io = (((il - 1)) * 41)
+      gc(hw, im[3], UDim2.fromOffset(14, (io + 12)), UDim2.fromOffset(16, 16), im[4])
+      ft(hw, im[1], UDim2.fromOffset(42, (io + 4)), UDim2.new(1, -56, 0, 15), Enum.Font.BuilderSans, ew.textFaint, 11)
+      ft(hw, im[2], UDim2.fromOffset(42, (io + 18)), UDim2.new(1, -56, 0, 18), Enum.Font.BuilderSans, im[4], 12)
+      if (((7 * 7) == 49) and (il < #ik)) then
+        fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(42, (io + 40)), Size = UDim2.new(1, -56, 0, 1), BackgroundColor3 = ew.divider, BackgroundTransparency = 0.84, BorderSizePixel = 0}, hw)
       end
     end
-    local il = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 392), Size = UDim2.new(1, -36, 0, 66), BackgroundTransparency = 1, BorderSizePixel = 0}, hl)
-    fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(0.5, 0, 0, 12), Size = UDim2.new(0, 1, 1, -24), BackgroundColor3 = et.divider, BackgroundTransparency = 0.78, BorderSizePixel = 0}, il)
-    local im = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.new(0.5, 0, 1, 0), BackgroundTransparency = 1}, il)
-    fz(im, (h({2, 103}, 97) .. h({233, 121, 113}, 134)), UDim2.fromOffset(14, 16), UDim2.fromOffset(16, 16), ex)
-    fq(im, (h({50, 158, 48}, 97) .. h({245, 119, 83, 122}, 134)), UDim2.fromOffset(38, 9), UDim2.new(1, -48, 0, 18), Enum.Font.BuilderSans, et.textFaint, 11)
-    local io = fq(im, (h({81, 232}, 97) .. h({188, 213, 68}, 134)), UDim2.fromOffset(38, 27), UDim2.new(1, -48, 0, 22), Enum.Font.BuilderSansBold, ex, 13)
-    local ip = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromScale(0.5, 0), Size = UDim2.new(0.5, 0, 1, 0), BackgroundTransparency = 1}, il)
-    fz(ip, h({45, 135, 138, 178}, 90), UDim2.fromOffset(14, 16), UDim2.fromOffset(16, 16), eu)
-    fq(ip, h({10, 174, 181, 11}, 90), UDim2.fromOffset(38, 9), UDim2.new(1, -48, 0, 18), Enum.Font.BuilderSans, et.textFaint, 11)
-    local iq = fq(ip, (h({76, 248}, 97) .. h({166, 166, 136}, 134)), UDim2.fromOffset(38, 27), UDim2.new(1, -48, 0, 22), Enum.Font.BuilderSansBold, eu, 13)
-    local ir = os.clock()
+    local ip = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 392), Size = UDim2.new(1, -36, 0, 66), BackgroundTransparency = 1, BorderSizePixel = 0}, ho)
+    fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(0.5, 0, 0, 12), Size = UDim2.new(0, 1, 1, -24), BackgroundColor3 = ew.divider, BackgroundTransparency = 0.78, BorderSizePixel = 0}, ip)
+    local iq = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.new(0.5, 0, 1, 0), BackgroundTransparency = 1}, ip)
+    gc(iq, (h({2, 103}, 97) .. h({233, 121, 113}, 134)), UDim2.fromOffset(14, 16), UDim2.fromOffset(16, 16), fa)
+    ft(iq, (h({50, 158, 48}, 97) .. h({245, 119, 83, 122}, 134)), UDim2.fromOffset(38, 9), UDim2.new(1, -48, 0, 18), Enum.Font.BuilderSans, ew.textFaint, 11)
+    local ir = ft(iq, (h({81, 232}, 97) .. h({188, 213, 68}, 134)), UDim2.fromOffset(38, 27), UDim2.new(1, -48, 0, 22), Enum.Font.BuilderSansBold, fa, 13)
+    local is = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromScale(0.5, 0), Size = UDim2.new(0.5, 0, 1, 0), BackgroundTransparency = 1}, ip)
+    gc(is, h({45, 135, 138, 178}, 90), UDim2.fromOffset(14, 16), UDim2.fromOffset(16, 16), ex)
+    ft(is, h({10, 174, 181, 11}, 90), UDim2.fromOffset(38, 9), UDim2.new(1, -48, 0, 18), Enum.Font.BuilderSans, ew.textFaint, 11)
+    local it = ft(is, (h({76, 248}, 97) .. h({166, 166, 136}, 134)), UDim2.fromOffset(38, 27), UDim2.new(1, -48, 0, 22), Enum.Font.BuilderSansBold, ex, 13)
+    local iu = os.clock()
     task.spawn(function()
-      while (((3 ^ 2) == 9) and cb.Parent) do
-        local is = math.floor((os.clock() - ir))
-        io.Text = string.format((h({68, 253, 254, 163}, 97) .. h({188, 192, 89, 34, 199}, 134)), math.floor((is / 60)), (is % 60))
-        local it = h({119, 137}, 90)
+      while (((1 + 1) == 2) and cb.Parent) do
+        local iv = math.floor((os.clock() - iu))
+        ir.Text = string.format((h({68, 253, 254, 163}, 97) .. h({188, 192, 89, 34, 199}, 134)), math.floor((iv / 60)), (iv % 60))
+        local iw = h({119, 137}, 90)
         pcall(function()
-          it = (bm.Network[s(106)][s(108)]:GetValueString():match((h({58, 38, 95}, 97) .. h({163, 254, 130, 92}, 134))) or h({119, 137}, 90))
+          iw = (bm.Network[s(106)][s(108)]:GetValueString():match((h({58, 38, 95}, 97) .. h({163, 254, 130, 92}, 134))) or h({119, 137}, 90))
         end)
-        iq.Text = (tostring(it) .. h({122, 250, 252}, 90))
+        it.Text = (tostring(iw) .. h({122, 250, 252}, 90))
         task.wait(1)
       end
     end)
-    local iu = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 502), Size = UDim2.new(1, -36, 0, 68), BackgroundTransparency = 1, BorderSizePixel = 0}, hl)
-    fz(iu, (h({2, 99}, 97) .. h({227, 115, 191}, 134)), UDim2.fromOffset(14, 24), UDim2.fromOffset(20, 20), eu)
-    fq(iu, ((h({34, 132, 179, 20, 160, 170, 151}, 97) .. h({227, 116, 245, 128, 78, 119, 193}, 134)) .. h({238, 191, 183, 183, 196, 12, 108}, 171)), UDim2.fromOffset(44, 11), UDim2.new(1, -56, 0, 24), Enum.Font.BuilderSansBold, eu, 13)
-    fq(iu, ((h({34, 174, 255, 119, 247}, 97) .. h({210, 182, 2, 55, 171, 203}, 134)) .. h({139, 188, 112, 152, 85, 197}, 171)), UDim2.fromOffset(44, 35), UDim2.new(1, -56, 0, 18), Enum.Font.BuilderSans, et.textMuted, 11)
-    fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(286, 20), Size = UDim2.new(0, 1, 1, -40), BackgroundColor3 = et.divider, BackgroundTransparency = 0.84, BorderSizePixel = 0, ZIndex = 3}, gq)
-    local iv = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(294, 8), Size = UDim2.new(1, -302, 1, -16), BackgroundTransparency = 1, BorderSizePixel = 0, ZIndex = 3}, gq)
-    local iw = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.new(1, 0, 0, 62), BackgroundTransparency = 1, Active = true}, iv)
-    fq(iw, (h({34, 174, 255, 119}, 97) .. h({213, 170, 14, 122}, 134)), UDim2.fromOffset(22, 8), UDim2.new(1, -100, 0, 30), Enum.Font.BuilderSansBold, et.text, 24)
-    fq(iw, ((h({49, 138, 94, 110, 234, 138}, 97) .. h({235, 56, 154, 176, 91, 251}, 134)) .. h({219, 106, 103, 90, 178, 133}, 171)), UDim2.fromOffset(23, 35), UDim2.new(1, -100, 0, 16), Enum.Font.BuilderSans, et.textFaint, 11)
-    fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 61), Size = UDim2.new(1, -40, 0, 1), BackgroundColor3 = et.divider, BackgroundTransparency = 0.74, BorderSizePixel = 0}, iw)
-    local ix = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, -44, 0, 12), Size = UDim2.fromOffset(32, 32), BackgroundColor3 = et.surface, BackgroundTransparency = 0.15, BorderSizePixel = 0, AutoButtonColor = false, Text = "", ZIndex = 5}, iw)
-    fh(ix, 8)
-    fa((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = et.divider, Thickness = 1, Transparency = 0.5, ZIndex = 5}, ix)
-    fq(ix, h({2}, 90), UDim2.new(), UDim2.fromOffset(32, 32), Enum.Font.BuilderSansBold, et.textMuted, 14, Enum.TextXAlignment.Center, 5)
-    ix.MouseEnter:Connect(function()
-      bj:Create(ix, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(217, 64, 64)}):Play()
-      bj:Create((ix:FindFirstChildOfClass((h({53, 153, 50, 11}, 97) .. h({202, 150, 65, 61, 162}, 134))) or ix), TweenInfo.new(0.12, Enum.EasingStyle.Quint), {TextColor3 = Color3.new(1, 1, 1)}):Play()
+    local ix = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 502), Size = UDim2.new(1, -36, 0, 68), BackgroundTransparency = 1, BorderSizePixel = 0}, ho)
+    gc(ix, (h({2, 99}, 97) .. h({227, 115, 191}, 134)), UDim2.fromOffset(14, 24), UDim2.fromOffset(20, 20), ex)
+    ft(ix, ((h({34, 132, 179, 20, 160, 170, 151}, 97) .. h({227, 116, 245, 128, 78, 119, 193}, 134)) .. h({238, 191, 183, 183, 196, 12, 108}, 171)), UDim2.fromOffset(44, 11), UDim2.new(1, -56, 0, 24), Enum.Font.BuilderSansBold, ex, 13)
+    ft(ix, ((h({34, 174, 255, 119, 247}, 97) .. h({210, 182, 2, 55, 171, 203}, 134)) .. h({139, 188, 112, 152, 85, 197}, 171)), UDim2.fromOffset(44, 35), UDim2.new(1, -56, 0, 18), Enum.Font.BuilderSans, ew.textMuted, 11)
+    fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(286, 20), Size = UDim2.new(0, 1, 1, -40), BackgroundColor3 = ew.divider, BackgroundTransparency = 0.84, BorderSizePixel = 0, ZIndex = 3}, gt)
+    local iy = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(294, 8), Size = UDim2.new(1, -302, 1, -16), BackgroundTransparency = 1, BorderSizePixel = 0, ZIndex = 3}, gt)
+    local iz = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Size = UDim2.new(1, 0, 0, 62), BackgroundTransparency = 1, Active = true}, iy)
+    ft(iz, (h({34, 174, 255, 119}, 97) .. h({213, 170, 14, 122}, 134)), UDim2.fromOffset(22, 8), UDim2.new(1, -100, 0, 30), Enum.Font.BuilderSansBold, ew.text, 24)
+    ft(iz, ((h({49, 138, 94, 110, 234, 138}, 97) .. h({235, 56, 154, 176, 91, 251}, 134)) .. h({219, 106, 103, 90, 178, 133}, 171)), UDim2.fromOffset(23, 35), UDim2.new(1, -100, 0, 16), Enum.Font.BuilderSans, ew.textFaint, 11)
+    fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 61), Size = UDim2.new(1, -40, 0, 1), BackgroundColor3 = ew.divider, BackgroundTransparency = 0.74, BorderSizePixel = 0}, iz)
+    local ja = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, -44, 0, 12), Size = UDim2.fromOffset(32, 32), BackgroundColor3 = ew.surface, BackgroundTransparency = 0.15, BorderSizePixel = 0, AutoButtonColor = false, Text = "", ZIndex = 5}, iz)
+    fk(ja, 8)
+    fd((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = ew.divider, Thickness = 1, Transparency = 0.5, ZIndex = 5}, ja)
+    ft(ja, h({2}, 90), UDim2.new(), UDim2.fromOffset(32, 32), Enum.Font.BuilderSansBold, ew.textMuted, 14, Enum.TextXAlignment.Center, 5)
+    ja.MouseEnter:Connect(function()
+      bj:Create(ja, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(217, 64, 64)}):Play()
+      bj:Create((ja:FindFirstChildOfClass((h({53, 153, 50, 11}, 97) .. h({202, 150, 65, 61, 162}, 134))) or ja), TweenInfo.new(0.12, Enum.EasingStyle.Quint), {TextColor3 = Color3.new(1, 1, 1)}):Play()
     end)
-    ix.MouseLeave:Connect(function()
-      bj:Create(ix, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = et.surface}):Play()
-      local iy = ix:FindFirstChildOfClass((h({53, 153, 50, 11}, 97) .. h({202, 150, 65, 61, 162}, 134)))
-      if (((7 * 7) == 49) and iy) then
-        bj:Create(iy, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {TextColor3 = et.textMuted}):Play()
+    ja.MouseLeave:Connect(function()
+      bj:Create(ja, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = ew.surface}):Play()
+      local jb = ja:FindFirstChildOfClass((h({53, 153, 50, 11}, 97) .. h({202, 150, 65, 61, 162}, 134)))
+      if (((15 * 15) == 225) and jb) then
+        bj:Create(jb, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {TextColor3 = ew.textMuted}):Play()
       end
     end)
-    ix.MouseButton1Click:Connect(function()
+    ja.MouseButton1Click:Connect(function()
       pcall(function()
-        ez.TimePosition = 0
-        ez:Play()
+        fc.TimePosition = 0
+        fc:Play()
       end)
-      bj:Create(gn, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
-      bj:Create(gp, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Scale = (gp.Scale * 0.96)}):Play()
-      bj:Create(go, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {GroupTransparency = 1}):Play()
+      bj:Create(gq, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+      bj:Create(gs, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Scale = (gs.Scale * 0.96)}):Play()
+      bj:Create(gr, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {GroupTransparency = 1}):Play()
       task.delay(0.18, function()
-        if (((1 + 1) == 2) and (es and es.Parent)) then
-          es:Destroy()
+        if (((100 % 7) == 2) and (ev and ev.Parent)) then
+          ev:Destroy()
         end
-        es = nil
+        ev = nil
         pcall(function()
-          if (((15 * 15) == 225) and cb) then
+          if (((12 * 12) == 144) and cb) then
             cb:Destroy()
           end
         end)
-        local iz = y()[at]
-        if (((100 % 7) == 2) and (type(iz) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134)))) then
-          pcall(iz)
+        local jc = y()[at]
+        if (((3 ^ 2) == 9) and (type(jc) == (h({7, 123, 182, 52}, 97) .. h({242, 118, 44, 43}, 134)))) then
+          pcall(jc)
         end
         y()[o] = nil
         y()[p] = nil
       end)
     end)
-    local ja = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 74), Size = UDim2.new(1, -40, 0, 88), BackgroundTransparency = 1, BorderSizePixel = 0}, iv)
-    local jb = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(0, 2), Size = UDim2.fromOffset(116, 82), BackgroundTransparency = 1}, ja)
-    fa((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(116, 90), BackgroundTransparency = 1, BorderSizePixel = 0, Image = ((h({19, 120, 97, 73, 9, 185, 159, 72, 112}, 97) .. h({226, 53, 139, 131, 221, 65, 69, 110, 171}, 134)) .. h({154, 235, 119, 111, 138, 14, 227, 195, 201}, 171)), ScaleType = Enum.ScaleType.Crop}, jb)
-    fq(ja, ((h({32, 170, 247, 131}, 97) .. h({208, 68, 109, 111, 189}, 134)) .. h({249, 86, 30, 232, 180}, 171)), UDim2.fromOffset(128, 11), UDim2.new(1, -318, 0, 17), Enum.Font.BuilderSansBold, eu, 11)
-    fq(ja, ((h({34, 174, 255, 119, 247}, 97) .. h({210, 182, 2, 55, 145}, 134)) .. h({223, 87, 0, 72, 62, 212}, 171)), UDim2.fromOffset(128, 29), UDim2.new(1, -318, 0, 24), Enum.Font.BuilderSansBold, et.text, 16)
-    fq(ja, ((h({49, 138, 94, 110, 234, 138, 2}, 97) .. h({166, 184, 98, 25, 9, 122, 195, 86}, 134)) .. h({207, 119, 136, 192, 127, 211, 18, 106}, 171)), UDim2.fromOffset(128, 54), UDim2.new(1, -318, 0, 18), Enum.Font.BuilderSans, et.textFaint, 12)
-    local jc = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(1, -172, 0.5, -17), Size = UDim2.fromOffset(154, 34), BackgroundColor3 = Color3.fromRGB(10, 53, 44), BackgroundTransparency = 0.18, BorderSizePixel = 0}, ja)
-    fh(jc, 6)
-    fz(jc, (h({18, 115, 79}, 97) .. h({227, 124, 185}, 134)), UDim2.fromOffset(12, 9), UDim2.fromOffset(16, 16), eu)
-    fq(jc, (h({55, 187, 106, 146}, 97) .. h({192, 184, 164, 41}, 134)), UDim2.fromOffset(36, 0), UDim2.new(1, -44, 1, 0), Enum.Font.BuilderSansBold, eu, 11, Enum.TextXAlignment.Left)
-    fq(iv, ((h({50, 190, 96, 108}, 97) .. h({212, 184, 17, 57}, 134)) .. h({232, 178, 158, 16, 122}, 171)), UDim2.fromOffset(22, 174), UDim2.new(1, -44, 0, 16), Enum.Font.BuilderSansBold, eu, 11)
-    fq(iv, ((h({36, 131, 158, 190, 17, 8, 64, 102, 218, 77, 12, 22, 210, 43, 91, 75, 168, 112}, 97) .. h({199, 204, 254, 26, 166, 179, 82, 16, 201, 236, 140, 168, 239, 149, 118, 27, 202, 207}, 134)) .. h({206, 51, 213, 139, 24, 57, 31, 242, 135, 127, 120, 9, 51, 87, 162, 74, 47, 126}, 171)), UDim2.fromOffset(22, 190), UDim2.new(1, -44, 0, 19), Enum.Font.BuilderSans, et.textMuted, 12)
-    local jd = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 218), Size = UDim2.new(1, -40, 0, 54), BackgroundColor3 = Color3.fromRGB(4, 10, 18), BackgroundTransparency = 0.3, BorderSizePixel = 0, ClipsDescendants = true}, iv)
-    fh(jd, 10)
-    local je = fa((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = eu, Thickness = 1.5, Transparency = 0.3}, jd)
-    local jf = fa((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(140, 16, 82)), ColorSequenceKeypoint.new(0.44, Color3.fromRGB(255, 64, 148)), ColorSequenceKeypoint.new(0.52, Color3.fromRGB(255, 178, 205)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(255, 64, 148)), ColorSequenceKeypoint.new(1, Color3.fromRGB(140, 16, 82))}), Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.6), NumberSequenceKeypoint.new(0.40, 0.4), NumberSequenceKeypoint.new(0.50, 0), NumberSequenceKeypoint.new(0.62, 0.4), NumberSequenceKeypoint.new(1, 0.6)}), Rotation = 0}, je)
-    local jg = bj:Create(jf, TweenInfo.new(2.65, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {Rotation = 360})
-    jg:Play()
+    local jd = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 74), Size = UDim2.new(1, -40, 0, 88), BackgroundTransparency = 1, BorderSizePixel = 0}, iy)
+    local je = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(0, 2), Size = UDim2.fromOffset(116, 82), BackgroundTransparency = 1}, jd)
+    fd((h({40, 156, 100, 226, 110}, 97) .. h({202, 150, 65, 61, 162}, 134)), {AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(116, 90), BackgroundTransparency = 1, BorderSizePixel = 0, Image = ((h({19, 120, 97, 73, 9, 185, 159, 72, 112}, 97) .. h({226, 53, 139, 131, 221, 65, 69, 110, 171}, 134)) .. h({154, 235, 119, 111, 138, 14, 227, 195, 201}, 171)), ScaleType = Enum.ScaleType.Crop}, je)
+    ft(jd, ((h({32, 170, 247, 131}, 97) .. h({208, 68, 109, 111, 189}, 134)) .. h({249, 86, 30, 232, 180}, 171)), UDim2.fromOffset(128, 11), UDim2.new(1, -318, 0, 17), Enum.Font.BuilderSansBold, ex, 11)
+    ft(jd, ((h({34, 174, 255, 119, 247}, 97) .. h({210, 182, 2, 55, 145}, 134)) .. h({223, 87, 0, 72, 62, 212}, 171)), UDim2.fromOffset(128, 29), UDim2.new(1, -318, 0, 24), Enum.Font.BuilderSansBold, ew.text, 16)
+    ft(jd, ((h({49, 138, 94, 110, 234, 138, 2}, 97) .. h({166, 184, 98, 25, 9, 122, 195, 86}, 134)) .. h({207, 119, 136, 192, 127, 211, 18, 106}, 171)), UDim2.fromOffset(128, 54), UDim2.new(1, -318, 0, 18), Enum.Font.BuilderSans, ew.textFaint, 12)
+    local jf = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.new(1, -172, 0.5, -17), Size = UDim2.fromOffset(154, 34), BackgroundColor3 = Color3.fromRGB(10, 53, 44), BackgroundTransparency = 0.18, BorderSizePixel = 0}, jd)
+    fk(jf, 6)
+    gc(jf, (h({18, 115, 79}, 97) .. h({227, 124, 185}, 134)), UDim2.fromOffset(12, 9), UDim2.fromOffset(16, 16), ex)
+    ft(jf, (h({55, 187, 106, 146}, 97) .. h({192, 184, 164, 41}, 134)), UDim2.fromOffset(36, 0), UDim2.new(1, -44, 1, 0), Enum.Font.BuilderSansBold, ex, 11, Enum.TextXAlignment.Left)
+    ft(iy, ((h({50, 190, 96, 108}, 97) .. h({212, 184, 17, 57}, 134)) .. h({232, 178, 158, 16, 122}, 171)), UDim2.fromOffset(22, 174), UDim2.new(1, -44, 0, 16), Enum.Font.BuilderSansBold, ex, 11)
+    ft(iy, ((h({36, 131, 158, 190, 17, 8, 64, 102, 218, 77, 12, 22, 210, 43, 91, 75, 168, 112}, 97) .. h({199, 204, 254, 26, 166, 179, 82, 16, 201, 236, 140, 168, 239, 149, 118, 27, 202, 207}, 134)) .. h({206, 51, 213, 139, 24, 57, 31, 242, 135, 127, 120, 9, 51, 87, 162, 74, 47, 126}, 171)), UDim2.fromOffset(22, 190), UDim2.new(1, -44, 0, 19), Enum.Font.BuilderSans, ew.textMuted, 12)
+    local jg = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 218), Size = UDim2.new(1, -40, 0, 54), BackgroundColor3 = Color3.fromRGB(4, 10, 18), BackgroundTransparency = 0.3, BorderSizePixel = 0, ClipsDescendants = true}, iy)
+    fk(jg, 10)
+    local jh = fd((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = ex, Thickness = 1.5, Transparency = 0.3}, jg)
+    local ji = fd((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(140, 16, 82)), ColorSequenceKeypoint.new(0.44, Color3.fromRGB(255, 64, 148)), ColorSequenceKeypoint.new(0.52, Color3.fromRGB(255, 178, 205)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(255, 64, 148)), ColorSequenceKeypoint.new(1, Color3.fromRGB(140, 16, 82))}), Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.6), NumberSequenceKeypoint.new(0.40, 0.4), NumberSequenceKeypoint.new(0.50, 0), NumberSequenceKeypoint.new(0.62, 0.4), NumberSequenceKeypoint.new(1, 0.6)}), Rotation = 0}, jh)
+    local jj = bj:Create(ji, TweenInfo.new(2.65, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {Rotation = 360})
+    jj:Play()
     cb.Destroying:Connect(function()
       pcall(function()
-        jg:Cancel()
+        jj:Cancel()
       end)
     end)
-    fz(jd, h({49, 135, 237}, 90), UDim2.fromOffset(16, 16), UDim2.fromOffset(20, 20), eu)
-    local jh = fa((h({53, 153, 50}, 97) .. h({242, 93, 115, 76}, 134)), {Position = UDim2.fromOffset(46, 0), Size = UDim2.new(1, -58, 1, 0), BackgroundTransparency = 1, BorderSizePixel = 0, Font = Enum.Font.Code, Text = "", PlaceholderText = ((h({54, 158, 50, 147, 175, 186}, 97) .. h({225, 50, 249, 175, 194, 99}, 134)) .. h({192, 124, 108, 35, 164, 219}, 171)), PlaceholderColor3 = et.textFaint, TextColor3 = et.text, TextSize = 14, TextXAlignment = Enum.TextXAlignment.Left, ClearTextOnFocus = false}, jd)
-    local ji = 0
+    gc(jg, h({49, 135, 237}, 90), UDim2.fromOffset(16, 16), UDim2.fromOffset(20, 20), ex)
+    local jk = fd((h({53, 153, 50}, 97) .. h({242, 93, 115, 76}, 134)), {Position = UDim2.fromOffset(46, 0), Size = UDim2.new(1, -58, 1, 0), BackgroundTransparency = 1, BorderSizePixel = 0, Font = Enum.Font.Code, Text = "", PlaceholderText = ((h({54, 158, 50, 147, 175, 186}, 97) .. h({225, 50, 249, 175, 194, 99}, 134)) .. h({192, 124, 108, 35, 164, 219}, 171)), PlaceholderColor3 = ew.textFaint, TextColor3 = ew.text, TextSize = 14, TextXAlignment = Enum.TextXAlignment.Left, ClearTextOnFocus = false}, jg)
+    local jl = 0
     task.spawn(function()
-      while (((12 * 12) == 144) and ((jd and jd.Parent) and (jh.Text == ""))) do
-        ji = (((ji + 1)) % 4)
-        jh.PlaceholderText = (((h({54, 158, 50, 147, 175}, 97) .. h({232, 126, 55, 164, 218}, 134)) .. h({217, 0, 106, 22, 242}, 171)) .. string.rep(h({116}, 90), ji))
+      while (((7 * 7) == 49) and ((jg and jg.Parent) and (jk.Text == ""))) do
+        jl = (((jl + 1)) % 4)
+        jk.PlaceholderText = (((h({54, 158, 50, 147, 175}, 97) .. h({232, 126, 55, 164, 218}, 134)) .. h({217, 0, 106, 22, 242}, 171)) .. string.rep(h({116}, 90), jl))
         task.wait(0.5)
       end
     end)
-    local jj = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.fromOffset(20, 284), Size = UDim2.new(0.5, -24, 0, 48), BackgroundColor3 = eu, BorderSizePixel = 0, AutoButtonColor = false, Text = "", ClipsDescendants = true}, iv)
-    fh(jj, 10)
-    fa((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new(eu, ev), Rotation = 88}, jj)
-    fz(jj, h({49, 135, 237}, 90), UDim2.fromOffset(22, 14), UDim2.fromOffset(18, 18), Color3.new(1, 1, 1))
-    Instance.new(s(105), jj)
-    fq(jj, (h({38, 138, 155}, 97) .. h({166, 128, 188, 44}, 134)), UDim2.fromOffset(48, 10), UDim2.new(1, -60, 0, 26), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 14, Enum.TextXAlignment.Left)
-    local jk = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(0.5, 4, 0, 284), Size = UDim2.new(0.5, -24, 0, 48), BackgroundColor3 = Color3.fromRGB(22, 14, 30), BorderSizePixel = 0, AutoButtonColor = false, Text = "", ClipsDescendants = true}, iv)
-    fh(jk, 10)
-    fa((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = eu, Thickness = 1, Transparency = 0.4}, jk)
-    fz(jk, (h({18, 115, 79}, 97) .. h({227, 124, 185}, 134)), UDim2.fromOffset(22, 14), UDim2.fromOffset(18, 18), eu)
-    Instance.new(s(105), jk)
-    local jl = fq(jk, (h({51, 159, 88}, 97) .. h({227, 117, 187}, 134)), UDim2.fromOffset(48, 10), UDim2.new(1, -60, 0, 26), Enum.Font.BuilderSansBold, eu, 14, Enum.TextXAlignment.Left)
-    local jm = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 340), Size = UDim2.new(1, -40, 0, 46), BackgroundTransparency = 1, BorderSizePixel = 0}, iv)
-    fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(0, 8), Size = UDim2.new(0, 3, 1, -16), BackgroundColor3 = eu, BorderSizePixel = 0}, jm)
-    fz(jm, (h({2, 99}, 97) .. h({227, 115, 191}, 134)), UDim2.fromOffset(16, 15), UDim2.fromOffset(16, 16), eu)
-    local jn = fq(jm, ((h({51, 159, 93, 98, 246, 67, 162, 32}, 97) .. h({166, 167, 155, 77, 144, 2, 99, 150}, 134)) .. h({232, 180, 145, 29, 253, 66, 166, 146}, 171)), UDim2.fromOffset(42, 13), UDim2.new(1, -58, 0, 20), Enum.Font.BuilderSansBold, eu, 13)
-    local function jo(jp)
-      local jq = (((((y().setclipboard or y().Clipboard) or y().clipboard) or y().set_clipboard) or y().writeclipboard) or y().SetClipboard)
-      if (((3 ^ 2) == 9) and jq) then
-        pcall(jq, jp)
+    local jm = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.fromOffset(20, 284), Size = UDim2.new(0.5, -24, 0, 48), BackgroundColor3 = ex, BorderSizePixel = 0, AutoButtonColor = false, Text = "", ClipsDescendants = true}, iy)
+    fk(jm, 10)
+    fd((h({52, 180, 114, 201, 241}, 97) .. h({226, 102, 182, 69, 232}, 134)), {Color = ColorSequence.new(ex, ey), Rotation = 88}, jm)
+    gc(jm, h({49, 135, 237}, 90), UDim2.fromOffset(22, 14), UDim2.fromOffset(18, 18), Color3.new(1, 1, 1))
+    Instance.new(s(105), jm)
+    ft(jm, (h({38, 138, 155}, 97) .. h({166, 128, 188, 44}, 134)), UDim2.fromOffset(48, 10), UDim2.new(1, -60, 0, 26), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 14, Enum.TextXAlignment.Left)
+    local jn = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(0.5, 4, 0, 284), Size = UDim2.new(0.5, -24, 0, 48), BackgroundColor3 = Color3.fromRGB(22, 14, 30), BorderSizePixel = 0, AutoButtonColor = false, Text = "", ClipsDescendants = true}, iy)
+    fk(jn, 10)
+    fd((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = ex, Thickness = 1, Transparency = 0.4}, jn)
+    gc(jn, (h({18, 115, 79}, 97) .. h({227, 124, 185}, 134)), UDim2.fromOffset(22, 14), UDim2.fromOffset(18, 18), ex)
+    Instance.new(s(105), jn)
+    local jo = ft(jn, (h({51, 159, 88}, 97) .. h({227, 117, 187}, 134)), UDim2.fromOffset(48, 10), UDim2.new(1, -60, 0, 26), Enum.Font.BuilderSansBold, ex, 14, Enum.TextXAlignment.Left)
+    local jp = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 340), Size = UDim2.new(1, -40, 0, 46), BackgroundTransparency = 1, BorderSizePixel = 0}, iy)
+    fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(0, 8), Size = UDim2.new(0, 3, 1, -16), BackgroundColor3 = ex, BorderSizePixel = 0}, jp)
+    gc(jp, (h({2, 99}, 97) .. h({227, 115, 191}, 134)), UDim2.fromOffset(16, 15), UDim2.fromOffset(16, 16), ex)
+    local jq = ft(jp, ((h({51, 159, 93, 98, 246, 67, 162, 32}, 97) .. h({166, 167, 155, 77, 144, 2, 99, 150}, 134)) .. h({232, 180, 145, 29, 253, 66, 166, 146}, 171)), UDim2.fromOffset(42, 13), UDim2.new(1, -58, 0, 20), Enum.Font.BuilderSansBold, ex, 13)
+    local function jr(js)
+      local jt = (((((y().setclipboard or y().Clipboard) or y().clipboard) or y().set_clipboard) or y().writeclipboard) or y().SetClipboard)
+      if (((1 + 1) == 2) and jt) then
+        pcall(jt, js)
       end
     end
-    local jr = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.fromOffset(20, 392), Size = UDim2.new(1, -40, 0, 44), BackgroundColor3 = Color3.fromRGB(30, 20, 45), BorderSizePixel = 0, AutoButtonColor = false, Text = "", ClipsDescendants = true}, iv)
-    fh(jr, 10)
-    fa((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = et.divider, Thickness = 1, Transparency = 0.5}, jr)
-    local js = gh(jr, UDim2.fromOffset(14, 11), UDim2.fromOffset(22, 22))
-    fq(jr, (h({37, 133, 173}, 97) .. h({229, 97, 160, 85}, 134)), UDim2.fromOffset(44, 11), UDim2.new(1, -52, 0, 22), Enum.Font.BuilderSansBold, et.text, 14, Enum.TextXAlignment.Left)
-    jr.MouseEnter:Connect(function()
-      bj:Create(jr, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(42, 28, 62)}):Play()
+    local ju = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.fromOffset(20, 392), Size = UDim2.new(1, -40, 0, 44), BackgroundColor3 = Color3.fromRGB(30, 20, 45), BorderSizePixel = 0, AutoButtonColor = false, Text = "", ClipsDescendants = true}, iy)
+    fk(ju, 10)
+    fd((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = ew.divider, Thickness = 1, Transparency = 0.5}, ju)
+    local jv = gk(ju, UDim2.fromOffset(14, 11), UDim2.fromOffset(22, 22))
+    ft(ju, (h({37, 133, 173}, 97) .. h({229, 97, 160, 85}, 134)), UDim2.fromOffset(44, 11), UDim2.new(1, -52, 0, 22), Enum.Font.BuilderSansBold, ew.text, 14, Enum.TextXAlignment.Left)
+    ju.MouseEnter:Connect(function()
+      bj:Create(ju, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(42, 28, 62)}):Play()
     end)
-    jr.MouseLeave:Connect(function()
-      bj:Create(jr, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(30, 20, 45)}):Play()
+    ju.MouseLeave:Connect(function()
+      bj:Create(ju, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(30, 20, 45)}):Play()
     end)
-    local jt = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {AnchorPoint = Vector2.new(0.5, 0), Position = UDim2.fromScale(0.5, 0), Size = UDim2.new(1, 0, 0, 40), BackgroundColor3 = Color3.fromRGB(10, 53, 44), BackgroundTransparency = 0.08, BorderSizePixel = 0, ClipsDescendants = true, Visible = false, ZIndex = 50}, iv)
-    fh(jt, 8)
-    fa((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = Color3.fromRGB(61, 187, 74), Thickness = 1, Transparency = 0.3, ZIndex = 51}, jt)
-    local ju = gh(jt, UDim2.fromOffset(10, 10), UDim2.fromOffset(20, 20), 51)
-    fq(jt, ((h({37, 133, 173, 229, 97, 160}, 97) .. h({226, 47, 230, 90, 161, 115, 52}, 134)) .. h({200, 126, 151, 171, 221, 10, 70}, 171)), UDim2.fromOffset(38, 0), UDim2.new(1, -70, 1, 0), Enum.Font.BuilderSansBold, Color3.fromRGB(61, 187, 74), 13, Enum.TextXAlignment.Left, 51)
-    local jv = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, -36, 0, 10), Size = UDim2.fromOffset(20, 20), BackgroundTransparency = 1, BorderSizePixel = 0, Text = h({2}, 90), Font = Enum.Font.BuilderSansBold, TextColor3 = Color3.fromRGB(162, 181, 209), TextSize = 12, ZIndex = 51}, jt)
-    jv.MouseButton1Click:Connect(function()
-      jt.Visible = false
+    local jw = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {AnchorPoint = Vector2.new(0.5, 0), Position = UDim2.fromScale(0.5, 0), Size = UDim2.new(1, 0, 0, 40), BackgroundColor3 = Color3.fromRGB(10, 53, 44), BackgroundTransparency = 0.08, BorderSizePixel = 0, ClipsDescendants = true, Visible = false, ZIndex = 50}, iy)
+    fk(jw, 8)
+    fd((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = Color3.fromRGB(61, 187, 74), Thickness = 1, Transparency = 0.3, ZIndex = 51}, jw)
+    local jx = gk(jw, UDim2.fromOffset(10, 10), UDim2.fromOffset(20, 20), 51)
+    ft(jw, ((h({37, 133, 173, 229, 97, 160}, 97) .. h({226, 47, 230, 90, 161, 115, 52}, 134)) .. h({200, 126, 151, 171, 221, 10, 70}, 171)), UDim2.fromOffset(38, 0), UDim2.new(1, -70, 1, 0), Enum.Font.BuilderSansBold, Color3.fromRGB(61, 187, 74), 13, Enum.TextXAlignment.Left, 51)
+    local jy = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, -36, 0, 10), Size = UDim2.fromOffset(20, 20), BackgroundTransparency = 1, BorderSizePixel = 0, Text = h({2}, 90), Font = Enum.Font.BuilderSansBold, TextColor3 = Color3.fromRGB(162, 181, 209), TextSize = 12, ZIndex = 51}, jw)
+    jy.MouseButton1Click:Connect(function()
+      jw.Visible = false
     end)
-    jr.MouseButton1Click:Connect(function()
+    ju.MouseButton1Click:Connect(function()
       pcall(function()
-        ez.TimePosition = 0
-        ez:Play()
+        fc.TimePosition = 0
+        fc:Play()
       end)
-      jo(((h({9, 100, 145, 200, 10, 249, 191, 15, 116}, 97) .. h({239, 103, 99, 11, 94, 195, 216, 142, 160}, 134)) .. h({132, 140, 22, 142, 126, 174, 217, 166, 133, 211}, 171)))
-      jt.Position = UDim2.new(0.5, 0, 0, -46)
-      jt.Visible = true
-      bj:Create(jt, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.fromScale(0.5, 0)}):Play()
+      jr(((h({9, 100, 145, 200, 10, 249, 191, 15, 116}, 97) .. h({239, 103, 99, 11, 94, 195, 216, 142, 160}, 134)) .. h({132, 140, 22, 142, 126, 174, 217, 166, 133, 211}, 171)))
+      jw.Position = UDim2.new(0.5, 0, 0, -46)
+      jw.Visible = true
+      bj:Create(jw, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.fromScale(0.5, 0)}):Play()
       task.delay(3, function()
-        if (((7 * 7) == 49) and (jt and jt.Parent)) then
-          bj:Create(jt, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {Position = UDim2.new(0.5, 0, 0, -46)}):Play()
+        if (((15 * 15) == 225) and (jw and jw.Parent)) then
+          bj:Create(jw, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {Position = UDim2.new(0.5, 0, 0, -46)}):Play()
           task.delay(0.3, function()
-            if (((1 + 1) == 2) and (jt and jt.Parent)) then
-              jt.Visible = false
+            if (((100 % 7) == 2) and (jw and jw.Parent)) then
+              jw.Visible = false
             end
           end)
         end
       end)
     end)
-    local jw = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 440), Size = UDim2.new(1, -40, 0, 130), BackgroundTransparency = 1, BorderSizePixel = 0, ClipsDescendants = true}, iv)
-    fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(1, 0, 0, 1), BackgroundColor3 = et.divider, BackgroundTransparency = 0.84, BorderSizePixel = 0}, jw)
-    local jx = fq(jw, (h({49, 170, 94}, 97) .. h({203, 177, 71, 153}, 134)), UDim2.fromOffset(18, 14), UDim2.fromOffset(62, 18), Enum.Font.BuilderSansBold, eu, 10, Enum.TextXAlignment.Center)
-    jx.BackgroundTransparency = 0
-    jx.BackgroundColor3 = Color3.fromRGB(67, 20, 40)
-    fh(jx, 6)
-    fq(jw, ((h({34, 174, 255, 119, 247}, 97) .. h({210, 182, 2, 55, 146}, 134)) .. h({217, 69, 43, 49, 167, 89}, 171)), UDim2.fromOffset(18, 40), UDim2.new(1, -44, 0, 22), Enum.Font.BuilderSansBold, et.text, 16)
-    fq(jw, ((h({32, 141, 178, 178, 73, 227, 129, 198, 243, 149, 221, 228, 228, 53, 32}, 97) .. h({239, 122, 156, 101, 119, 229, 15, 64, 132, 173, 139, 53, 154, 159, 10}, 134)) .. h({217, 69, 33, 39, 216, 56, 163, 10, 50, 23, 38, 82, 179, 131, 195}, 171)), UDim2.fromOffset(18, 64), UDim2.new(1, -44, 0, 19), Enum.Font.BuilderSans, et.textMuted, 12)
-    local jy = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 88), Size = UDim2.new(1, -36, 0, 30), BackgroundTransparency = 1, BorderSizePixel = 0}, jw)
-    fz(jy, h({54, 140, 198, 140}, 90), UDim2.fromOffset(2, 7), UDim2.fromOffset(14, 14), eu)
-    fq(jy, ((h({50, 158, 32, 76, 119, 243}, 97) .. h({166, 237, 148, 72, 207, 181}, 134)) .. h({217, 89, 42, 147, 163, 180}, 171)), UDim2.fromOffset(20, 4), UDim2.new(0, 100, 0, 22), Enum.Font.BuilderSans, et.textMuted, 11, Enum.TextXAlignment.Left)
-    fz(jy, (h({4, 97, 173, 189, 2}, 97) .. h({244, 116, 86, 190, 63, 251}, 134)), UDim2.fromOffset(142, 7), UDim2.fromOffset(14, 14), eu)
-    fq(jy, ((h({39, 143, 151, 196, 101}, 97) .. h({160, 241, 151, 72, 141}, 134)) .. h({194, 122, 102, 169, 37, 66}, 171)), UDim2.fromOffset(160, 4), UDim2.new(0, 100, 0, 22), Enum.Font.BuilderSans, et.textMuted, 11, Enum.TextXAlignment.Left)
-    fz(jy, (h({18, 115, 79, 17, 254, 15}, 97) .. h({171, 187, 36, 24, 178, 112}, 134)), UDim2.fromOffset(269, 7), UDim2.fromOffset(14, 14), eu)
-    fq(jy, ((h({50, 154, 89, 69, 102}, 97) .. h({160, 241, 138, 94, 111}, 134)) .. h({194, 118, 97, 20, 208}, 171)), UDim2.fromOffset(287, 4), UDim2.new(0, 100, 0, 22), Enum.Font.BuilderSans, et.textMuted, 11, Enum.TextXAlignment.Left)
-    local jz = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(440, 300), BackgroundTransparency = 1, BorderSizePixel = 0, ZIndex = 30, Visible = false}, gn)
-    fk(jz, Color3.fromRGB(14, 24, 41), Color3.fromRGB(9, 12, 24), 0.06, 16)
-    fa((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {Thickness = 1, Color = eu, Transparency = 0.55, ApplyStrokeMode = Enum.ApplyStrokeMode.Border}, jz)
-    local ka = fq(jz, ((h({34, 164, 240, 41, 236}, 97) .. h({195, 164, 160, 169, 180, 61}, 134)) .. h({238, 211, 138, 254, 5, 23}, 171)), UDim2.fromOffset(20, 16), UDim2.new(1, -40, 0, 20), Enum.Font.BuilderSansBold, eu, 14, Enum.TextXAlignment.Center)
-    local kb = fq(jz, ((h({34, 131, 185, 37, 5, 203, 8, 88, 209, 212, 28, 243, 209, 174, 155, 81, 82, 58, 145, 72, 144, 77, 36, 84, 123, 34, 86, 172, 176, 171}, 97) .. h({166, 169, 130, 108, 242, 104, 84, 207, 190, 91, 58, 226, 229, 250, 91, 40, 153, 158, 223, 85, 64, 55, 119, 144, 113, 62, 166, 125, 157, 101, 102}, 134)) .. h({139, 186, 127, 111, 140, 182, 88, 132, 99, 190, 159, 45, 73, 68, 185, 96, 149, 244, 200, 79, 118, 24, 174, 218, 10, 79, 72, 232, 66, 32, 87}, 171)), UDim2.fromOffset(20, 44), UDim2.new(1, -40, 0, 40), Enum.Font.BuilderSans, et.textMuted, 12, Enum.TextXAlignment.Center)
-    local kc = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 92), Size = UDim2.new(1, -40, 0, 44), BackgroundTransparency = 1, BorderSizePixel = 0}, jz)
-    local kd = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(0.5, -5, 1, 0), BackgroundColor3 = eu, BorderSizePixel = 0, Text = "", ZIndex = 31}, kc)
-    fh(kd, 8)
-    local ke = fq(kd, ((h({46, 167, 87, 138, 139}, 97) .. h({202, 190, 69, 215, 198}, 134)) .. h({238, 161, 172, 84, 70, 162}, 171)), UDim2.new(), UDim2.new(1, 0, 1, 0), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 13, Enum.TextXAlignment.Center)
-    local kf = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, 0, 0, 0), AnchorPoint = Vector2.new(1, 0), Size = UDim2.new(0.5, -5, 1, 0), BackgroundColor3 = Color3.fromRGB(61, 123, 204), BorderSizePixel = 0, Text = "", ZIndex = 31}, kc)
-    fh(kf, 8)
-    local kg = fq(kf, ((h({46, 167, 87, 138}, 97) .. h({166, 135, 149, 9}, 134)) .. h({255, 78, 26, 253, 47}, 171)), UDim2.new(), UDim2.new(1, 0, 1, 0), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 13, Enum.TextXAlignment.Center)
-    kd.MouseEnter:Connect(function()
-      bj:Create(kd, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = ex}):Play()
+    local jz = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 440), Size = UDim2.new(1, -40, 0, 130), BackgroundTransparency = 1, BorderSizePixel = 0, ClipsDescendants = true}, iy)
+    fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(1, 0, 0, 1), BackgroundColor3 = ew.divider, BackgroundTransparency = 0.84, BorderSizePixel = 0}, jz)
+    local ka = ft(jz, (h({49, 170, 94}, 97) .. h({203, 177, 71, 153}, 134)), UDim2.fromOffset(18, 14), UDim2.fromOffset(62, 18), Enum.Font.BuilderSansBold, ex, 10, Enum.TextXAlignment.Center)
+    ka.BackgroundTransparency = 0
+    ka.BackgroundColor3 = Color3.fromRGB(67, 20, 40)
+    fk(ka, 6)
+    ft(jz, ((h({34, 174, 255, 119, 247}, 97) .. h({210, 182, 2, 55, 146}, 134)) .. h({217, 69, 43, 49, 167, 89}, 171)), UDim2.fromOffset(18, 40), UDim2.new(1, -44, 0, 22), Enum.Font.BuilderSansBold, ew.text, 16)
+    ft(jz, ((h({32, 141, 178, 178, 73, 227, 129, 198, 243, 149, 221, 228, 228, 53, 32}, 97) .. h({239, 122, 156, 101, 119, 229, 15, 64, 132, 173, 139, 53, 154, 159, 10}, 134)) .. h({217, 69, 33, 39, 216, 56, 163, 10, 50, 23, 38, 82, 179, 131, 195}, 171)), UDim2.fromOffset(18, 64), UDim2.new(1, -44, 0, 19), Enum.Font.BuilderSans, ew.textMuted, 12)
+    local kb = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(18, 88), Size = UDim2.new(1, -36, 0, 30), BackgroundTransparency = 1, BorderSizePixel = 0}, jz)
+    gc(kb, h({54, 140, 198, 140}, 90), UDim2.fromOffset(2, 7), UDim2.fromOffset(14, 14), ex)
+    ft(kb, ((h({50, 158, 32, 76, 119, 243}, 97) .. h({166, 237, 148, 72, 207, 181}, 134)) .. h({217, 89, 42, 147, 163, 180}, 171)), UDim2.fromOffset(20, 4), UDim2.new(0, 100, 0, 22), Enum.Font.BuilderSans, ew.textMuted, 11, Enum.TextXAlignment.Left)
+    gc(kb, (h({4, 97, 173, 189, 2}, 97) .. h({244, 116, 86, 190, 63, 251}, 134)), UDim2.fromOffset(142, 7), UDim2.fromOffset(14, 14), ex)
+    ft(kb, ((h({39, 143, 151, 196, 101}, 97) .. h({160, 241, 151, 72, 141}, 134)) .. h({194, 122, 102, 169, 37, 66}, 171)), UDim2.fromOffset(160, 4), UDim2.new(0, 100, 0, 22), Enum.Font.BuilderSans, ew.textMuted, 11, Enum.TextXAlignment.Left)
+    gc(kb, (h({18, 115, 79, 17, 254, 15}, 97) .. h({171, 187, 36, 24, 178, 112}, 134)), UDim2.fromOffset(269, 7), UDim2.fromOffset(14, 14), ex)
+    ft(kb, ((h({50, 154, 89, 69, 102}, 97) .. h({160, 241, 138, 94, 111}, 134)) .. h({194, 118, 97, 20, 208}, 171)), UDim2.fromOffset(287, 4), UDim2.new(0, 100, 0, 22), Enum.Font.BuilderSans, ew.textMuted, 11, Enum.TextXAlignment.Left)
+    local kc = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(440, 300), BackgroundTransparency = 1, BorderSizePixel = 0, ZIndex = 30, Visible = false}, gq)
+    fn(kc, Color3.fromRGB(14, 24, 41), Color3.fromRGB(9, 12, 24), 0.06, 16)
+    fd((h({52, 180, 102, 179}, 97) .. h({244, 114, 80, 108}, 134)), {Thickness = 1, Color = ex, Transparency = 0.55, ApplyStrokeMode = Enum.ApplyStrokeMode.Border}, kc)
+    local kd = ft(kc, ((h({34, 164, 240, 41, 236}, 97) .. h({195, 164, 160, 169, 180, 61}, 134)) .. h({238, 211, 138, 254, 5, 23}, 171)), UDim2.fromOffset(20, 16), UDim2.new(1, -40, 0, 20), Enum.Font.BuilderSansBold, ex, 14, Enum.TextXAlignment.Center)
+    local ke = ft(kc, ((h({34, 131, 185, 37, 5, 203, 8, 88, 209, 212, 28, 243, 209, 174, 155, 81, 82, 58, 145, 72, 144, 77, 36, 84, 123, 34, 86, 172, 176, 171}, 97) .. h({166, 169, 130, 108, 242, 104, 84, 207, 190, 91, 58, 226, 229, 250, 91, 40, 153, 158, 223, 85, 64, 55, 119, 144, 113, 62, 166, 125, 157, 101, 102}, 134)) .. h({139, 186, 127, 111, 140, 182, 88, 132, 99, 190, 159, 45, 73, 68, 185, 96, 149, 244, 200, 79, 118, 24, 174, 218, 10, 79, 72, 232, 66, 32, 87}, 171)), UDim2.fromOffset(20, 44), UDim2.new(1, -40, 0, 40), Enum.Font.BuilderSans, ew.textMuted, 12, Enum.TextXAlignment.Center)
+    local kf = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 92), Size = UDim2.new(1, -40, 0, 44), BackgroundTransparency = 1, BorderSizePixel = 0}, kc)
+    local kg = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(0.5, -5, 1, 0), BackgroundColor3 = ex, BorderSizePixel = 0, Text = "", ZIndex = 31}, kf)
+    fk(kg, 8)
+    local kh = ft(kg, ((h({46, 167, 87, 138, 139}, 97) .. h({202, 190, 69, 215, 198}, 134)) .. h({238, 161, 172, 84, 70, 162}, 171)), UDim2.new(), UDim2.new(1, 0, 1, 0), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 13, Enum.TextXAlignment.Center)
+    local ki = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, 0, 0, 0), AnchorPoint = Vector2.new(1, 0), Size = UDim2.new(0.5, -5, 1, 0), BackgroundColor3 = Color3.fromRGB(61, 123, 204), BorderSizePixel = 0, Text = "", ZIndex = 31}, kf)
+    fk(ki, 8)
+    local kj = ft(ki, ((h({46, 167, 87, 138}, 97) .. h({166, 135, 149, 9}, 134)) .. h({255, 78, 26, 253, 47}, 171)), UDim2.new(), UDim2.new(1, 0, 1, 0), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 13, Enum.TextXAlignment.Center)
+    kg.MouseEnter:Connect(function()
+      bj:Create(kg, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = fa}):Play()
     end)
-    kd.MouseLeave:Connect(function()
-      bj:Create(kd, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = eu}):Play()
+    kg.MouseLeave:Connect(function()
+      bj:Create(kg, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = ex}):Play()
     end)
-    kf.MouseEnter:Connect(function()
-      bj:Create(kf, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(95, 155, 235)}):Play()
+    ki.MouseEnter:Connect(function()
+      bj:Create(ki, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(95, 155, 235)}):Play()
     end)
-    kf.MouseLeave:Connect(function()
-      bj:Create(kf, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(61, 123, 204)}):Play()
+    ki.MouseLeave:Connect(function()
+      bj:Create(ki, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(61, 123, 204)}):Play()
     end)
-    local kh = fa((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 92), Size = UDim2.new(1, -40, 0, 56), BackgroundColor3 = Color3.fromRGB(4, 10, 18), BackgroundTransparency = 0.5, BorderSizePixel = 0, Visible = false}, jz)
-    fh(kh, 8)
-    local ki = fq(kh, "", UDim2.fromOffset(10, 8), UDim2.new(1, -20, 1, -16), Enum.Font.Code, et.text, 11, Enum.TextXAlignment.Left)
-    ki.TextWrapped = true
-    ki.TextYAlignment = Enum.TextYAlignment.Top
-    ki.TextTruncate = Enum.TextTruncate.AtEnd
-    local kj = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {AnchorPoint = Vector2.new(0.5, 0), Position = UDim2.new(0.5, 0, 0, 162), Size = UDim2.fromOffset(180, 40), BackgroundColor3 = eu, BorderSizePixel = 0, Text = "", Visible = false, ZIndex = 31}, jz)
-    fh(kj, 10)
-    local kk = fq(kj, (h({34, 164, 237, 37}, 97) .. h({166, 135, 147, 14, 68}, 134)), UDim2.new(), UDim2.fromOffset(180, 40), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 14, Enum.TextXAlignment.Center)
-    local function kl(km)
-      kc.Visible = false
-      kh.Visible = true
-      kj.Visible = true
-      local kn = cy(km)
-      ed()
+    local kk = fd((h({39, 156}, 97) .. h({231, 97, 167}, 134)), {Position = UDim2.fromOffset(20, 92), Size = UDim2.new(1, -40, 0, 56), BackgroundColor3 = Color3.fromRGB(4, 10, 18), BackgroundTransparency = 0.5, BorderSizePixel = 0, Visible = false}, kc)
+    fk(kk, 8)
+    local kl = ft(kk, "", UDim2.fromOffset(10, 8), UDim2.new(1, -20, 1, -16), Enum.Font.Code, ew.text, 11, Enum.TextXAlignment.Left)
+    kl.TextWrapped = true
+    kl.TextYAlignment = Enum.TextYAlignment.Top
+    kl.TextTruncate = Enum.TextTruncate.AtEnd
+    local km = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {AnchorPoint = Vector2.new(0.5, 0), Position = UDim2.new(0.5, 0, 0, 162), Size = UDim2.fromOffset(180, 40), BackgroundColor3 = ex, BorderSizePixel = 0, Text = "", Visible = false, ZIndex = 31}, kc)
+    fk(km, 10)
+    local kn = ft(km, (h({34, 164, 237, 37}, 97) .. h({166, 135, 147, 14, 68}, 134)), UDim2.new(), UDim2.fromOffset(180, 40), Enum.Font.BuilderSansBold, Color3.new(1, 1, 1), 14, Enum.TextXAlignment.Center)
+    local function ko(kp)
+      kf.Visible = false
+      kk.Visible = true
+      km.Visible = true
+      local kq = cy(kp)
+      ef()
       pcall(function()
-        da(kn)
+        da(kq)
       end)
-      ki.Text = kn
+      kl.Text = kq
+      kn.Text = (h({34, 164, 237, 37}, 97) .. h({166, 135, 147, 14, 68}, 134))
     end
-    kd.MouseButton1Click:Connect(function()
-      kl(1)
+    kg.MouseButton1Click:Connect(function()
+      ko(1)
     end)
-    kf.MouseButton1Click:Connect(function()
-      kl(2)
+    ki.MouseButton1Click:Connect(function()
+      ko(2)
     end)
-    kj.MouseEnter:Connect(function()
-      bj:Create(kj, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = ex}):Play()
+    km.MouseEnter:Connect(function()
+      bj:Create(km, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = fa}):Play()
     end)
-    kj.MouseLeave:Connect(function()
-      bj:Create(kj, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = eu}):Play()
+    km.MouseLeave:Connect(function()
+      bj:Create(km, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = ex}):Play()
     end)
-    kj.MouseButton1Click:Connect(function()
-      jo(ki.Text)
-      kk.Text = (h({34, 164, 237}, 97) .. h({207, 177, 182, 194}, 134))
-      bj:Create(kj, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(61, 187, 74)}):Play()
+    km.MouseButton1Click:Connect(function()
+      jr(kl.Text)
+      kn.Text = (h({34, 164, 237}, 97) .. h({207, 177, 182, 194}, 134))
+      bj:Create(km, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(61, 187, 74)}):Play()
       task.delay(0.6, function()
-        if (((15 * 15) == 225) and (not jz or not jz.Parent)) then
+        if (((12 * 12) == 144) and (not kc or not kc.Parent)) then
           return
         end
-        jz.Visible = false
-        jn.Text = ((h({42, 150, 114, 231, 241, 13, 110, 42, 90, 123, 31, 244, 189, 173, 133, 90, 210}, 97) .. h({166, 162, 131, 22, 242, 201, 32, 85, 52, 136, 193, 3, 33, 59, 104, 123, 125, 150}, 134)) .. h({139, 175, 106, 239, 18, 15, 152, 188, 38, 180, 197, 54, 74, 235, 75, 237, 147, 78}, 171))
-        bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = ex}):Play()
+        kc.Visible = false
+        jq.Text = ((h({42, 150, 114, 231, 241, 13, 110, 42, 90, 123, 31, 244, 189, 173, 133, 90, 210}, 97) .. h({166, 162, 131, 22, 242, 201, 32, 85, 52, 136, 193, 3, 33, 59, 104, 123, 125, 150}, 134)) .. h({139, 175, 106, 239, 18, 15, 152, 188, 38, 180, 197, 54, 74, 235, 75, 237, 147, 78}, 171))
+        bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = fa}):Play()
       end)
     end)
-    local ko = fa((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, -40, 0, 12), Size = UDim2.fromOffset(24, 24), BackgroundTransparency = 1, BorderSizePixel = 0, Text = h({2}, 90), Font = Enum.Font.BuilderSansBold, TextColor3 = et.textMuted, TextSize = 13, ZIndex = 31}, jz)
-    ko.MouseButton1Click:Connect(function()
-      jz.Visible = false
+    local kr = fd((h({53, 153, 50, 11, 172}, 97) .. h({243, 84, 33, 167, 134}, 134)), {Position = UDim2.new(1, -40, 0, 12), Size = UDim2.fromOffset(24, 24), BackgroundTransparency = 1, BorderSizePixel = 0, Text = h({2}, 90), Font = Enum.Font.BuilderSansBold, TextColor3 = ew.textMuted, TextSize = 13, ZIndex = 31}, kc)
+    kr.MouseButton1Click:Connect(function()
+      kc.Visible = false
     end)
-    local function kp(kq)
-      local kr = {}
-      for ks = 1, #kq, 2 do
-        kr[(#kr + 1)] = string.char((tonumber(string.sub(kq, ks, (ks + 1)), 16) or 0))
+    local function ks(kt)
+      local ku = {}
+      for kv = 1, #kt, 2 do
+        ku[(#ku + 1)] = string.char((tonumber(string.sub(kt, kv, (kv + 1)), 16) or 0))
       end
-      return table.concat(kr)
+      return table.concat(ku)
     end
-    local function kt(ku, kv)
-      local kw = {}
-      for kx = 0, 255 do
-        kw[kx] = kx
-      end
-      local ky = 0
-      local kz = #ku
+    local function kw(kx, ky)
+      local kz = {}
       for la = 0, 255 do
-        ky = ((((ky + kw[la]) + string.byte(ku, (((la % kz)) + 1)))) % 256)
-        kw[la], kw[ky] = kw[ky], kw[la]
+        kz[la] = la
       end
-      local lb, lc = 0, 0
-      local ld = {}
-      for le = 1, #kv do
-        lb = (((lb + 1)) % 256)
-        lc = (((lc + kw[lb])) % 256)
-        kw[lb], kw[lc] = kw[lc], kw[lb]
-        ld[le] = string.char(bit32.bxor(string.byte(kv, le), kw[(((kw[lb] + kw[lc])) % 256)]))
+      local lb = 0
+      local lc = #kx
+      for ld = 0, 255 do
+        lb = ((((lb + kz[ld]) + string.byte(kx, (((ld % lc)) + 1)))) % 256)
+        kz[ld], kz[lb] = kz[lb], kz[ld]
       end
-      return table.concat(ld)
+      local le, lf = 0, 0
+      local lg = {}
+      for lh = 1, #ky do
+        le = (((le + 1)) % 256)
+        lf = (((lf + kz[le])) % 256)
+        kz[le], kz[lf] = kz[lf], kz[le]
+        lg[lh] = string.char(bit32.bxor(string.byte(ky, lh), kz[(((kz[le] + kz[lf])) % 256)]))
+      end
+      return table.concat(lg)
     end
     y()[(h({62, 68, 48, 53, 217}, 97) .. h({213, 170, 14, 122, 128, 41}, 134))] = function()
       y()[o] = nil
       y()[p] = nil
     end
-    local function lf()
-      bj:Create(gn, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
-      bj:Create(gp, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Scale = (gp.Scale * 0.96)}):Play()
-      bj:Create(go, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {GroupTransparency = 1}):Play()
-      jn.Text = ((h({45, 155, 125, 66, 6, 29}, 97) .. h({225, 50, 220, 216, 221, 1}, 134)) .. h({248, 85, 21, 143, 202, 69, 50}, 171))
+    local function li()
+      bj:Create(gq, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+      bj:Create(gs, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Scale = (gs.Scale * 0.96)}):Play()
+      bj:Create(gr, TweenInfo.new(0.15, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {GroupTransparency = 1}):Play()
+      jq.Text = ((h({45, 155, 125, 66, 6, 29}, 97) .. h({225, 50, 220, 216, 221, 1}, 134)) .. h({248, 85, 21, 143, 202, 69, 50}, 171))
       task.delay(0.18, function()
-        if (((100 % 7) == 2) and (es and es.Parent)) then
-          es:Destroy()
+        if (((3 ^ 2) == 9) and (ev and ev.Parent)) then
+          ev:Destroy()
         end
-        es = nil
-        if (((12 * 12) == 144) and (cb and cb.Parent)) then
-          cb.Visible = false
-        end
+        ev = nil
+        pcall(function()
+          if (((7 * 7) == 49) and (cb and cb.Parent)) then
+            cb.Visible = false
+          end
+        end)
+        pcall(function()
+          if (((1 + 1) == 2) and (cb and cb.Parent)) then
+            cb.Enabled = false
+          end
+        end)
       end)
       task.spawn(function()
-        local lg, lh
-        local li, lj = pcall(function()
-          return dm((((h({26, 1, 121, 105, 222, 114, 72, 239, 212, 231, 100, 125, 173, 143, 88}, 97) .. h({233, 123, 124, 47, 82, 189, 30, 178, 142, 215, 238, 9, 106, 73, 102, 212}, 134)) .. h({137, 252, 255, 93, 211, 19, 103, 105, 5, 56, 150, 182, 231, 216, 195, 40}, 171)) .. (cv(ch) .. ((h({67, 230, 145, 125}, 97) .. h({239, 112, 211, 128, 115}, 134)) .. (tostring(bn.UserId) .. h({120, 228}, 90))))))
-        end)
-        if (((3 ^ 2) == 9) and (li and lj)) then
-          lg = string.match(lj, ((h({67, 164, 154, 77, 7, 69, 100}, 97) .. h({163, 163, 14, 29, 105, 73, 32}, 134)) .. h({137, 248, 252, 109, 39, 169, 136}, 171)))
-          lh = string.match(lj, ((h({67, 174, 138, 187, 127, 22}, 97) .. h({163, 163, 14, 29, 105, 73, 32}, 134)) .. h({137, 248, 252, 109, 39, 169, 136}, 171)))
+        local lj, lk, ll
+        for lm = 1, 3 do
+          local ln, lo = pcall(function()
+            return dp((((h({26, 1, 121, 105, 222, 114, 72, 239, 212, 231, 100, 125, 173, 143, 88, 182, 62, 159, 96, 221, 230, 29, 169}, 97) .. h({239, 120, 157, 22, 181, 6, 105, 99, 70, 243, 100, 125, 173, 132, 89, 195, 102, 197, 22, 186, 61, 208, 51}, 134)) .. h({219, 127, 70, 171, 172, 63, 124, 132, 7, 10, 21, 215, 149, 133, 93, 223, 11, 66, 252, 188, 89, 50, 169, 98}, 171)) .. (cv(ch) .. ((h({67, 230, 145, 125}, 97) .. h({239, 112, 211, 128, 115}, 134)) .. (tostring(bn.UserId) .. h({120, 228}, 90))))))
+          end)
+          if (((15 * 15) == 225) and (ln and lo)) then
+            local lp = (string.match(lo, ((h({67, 190, 148, 57, 241, 62}, 97) .. h({164, 232, 178, 145, 114, 22}, 134)) .. h({216, 11, 58, 130, 211, 77, 223}, 171))) or h({107}, 90))
+            lj = string.match(lo, ((h({67, 164, 154, 77, 7, 69, 100}, 97) .. h({163, 163, 14, 29, 105, 73, 32}, 134)) .. h({137, 248, 252, 109, 39, 169, 136}, 171)))
+            local lq = string.match(lo, ((h({67, 174, 138, 187, 127, 22}, 97) .. h({163, 163, 14, 29, 105, 73, 32}, 134)) .. h({137, 248, 252, 109, 39, 169, 136}, 171)))
+            if (((100 % 7) == 2) and not ((lj and lq))) then
+              ll = (h({41, 152, 175, 92}, 90) .. string.sub(lo, 1, 60))
+            end
+            if (((12 * 12) == 144) and lq) then
+              local lr = tonumber(lp)
+              if (((3 ^ 2) == 9) and ((lr and (lr > 1)) and (lr <= 20))) then
+                local ls = {}
+                for lt = 2, lr do
+                  local lu = nil
+                  for lv = 1, 3 do
+                    local lw, lx = pcall(function()
+                      return dp((((h({26, 1, 121, 105, 222, 114, 72, 239, 212, 231, 100, 125, 173, 143}, 97) .. h({234, 120, 112, 189, 118, 67, 20, 255, 219, 81, 158, 111, 144, 59}, 134)) .. h({137, 166, 20, 103, 42, 117, 244, 108, 207, 234, 180, 199, 92, 39}, 171)) .. (lp .. ((h({67, 230, 145, 120, 200}, 97) .. h({244, 105, 98, 217, 82}, 134)) .. (lt .. ((h({67, 230, 145, 102, 200}, 97) .. h({232, 122, 118, 201, 170, 9}, 134)) .. (((lj or "")) .. (((h({67, 230, 145, 123, 201}, 97) .. h({245, 109, 47, 59, 210}, 134)) .. h({244, 100, 161, 234, 161, 90}, 171)) .. (cv(ch) .. ((h({67, 230, 145, 125}, 97) .. h({239, 112, 211, 128, 115}, 134)) .. (tostring(bn.UserId) .. h({120, 228}, 90))))))))))))
+                    end)
+                    if (((7 * 7) == 49) and (lw and lx)) then
+                      lu = string.match(lx, ((h({67, 174, 138, 187, 127, 22}, 97) .. h({163, 163, 14, 29, 105, 73, 32}, 134)) .. h({137, 248, 252, 109, 39, 169, 136}, 171)))
+                    end
+                    if (((1 + 1) == 2) and lu) then
+                      break
+                    end
+                    task.wait(0.8)
+                  end
+                  if (((15 * 15) == 225) and lu) then
+                    ls[lt] = lu
+                  end
+                  if (((100 % 7) == 2) and not lu) then
+                    ll = ((h({17, 121}, 97) .. h({244, 105, 96}, 134)) .. (lt .. (h({65, 174, 190}, 97) .. h({239, 120, 156, 81}, 134))))
+                    break
+                  end
+                  task.wait(0.25)
+                end
+                if (((12 * 12) == 144) and ll) then
+                  break
+                end
+                local ly = lq
+                for lz = 2, lr do
+                  ly = (ly .. ((ls[lz] or "")))
+                end
+                lk = ly
+              else
+                lk = lq
+              end
+            end
+          else
+            ll = tostring(lo)
+          end
+          if (((3 ^ 2) == 9) and (lj and lk)) then
+            break
+          end
+          if (((7 * 7) == 49) and (lm < 3)) then
+            task.wait(1.2)
+          end
         end
-        if (((7 * 7) == 49) and not ((lg and lh))) then
+        local function ma(mb)
           task.wait(0.15)
-          if (((1 + 1) == 2) and (cb and cb.Parent)) then
-            cb.Visible = true
-            bj:Create(gn, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {BackgroundTransparency = 0.78}):Play()
-            bj:Create(go, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {GroupTransparency = 0}):Play()
-            bj:Create(gp, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {Scale = 1}):Play()
-            jn.Text = ((h({45, 155, 125, 66, 79, 76, 236, 84, 121, 101, 2, 1, 88, 42, 75}, 97) .. h({227, 115, 191, 24, 192, 103, 218, 82, 149, 170, 174, 135, 54, 195, 34, 189}, 134)) .. h({210, 7, 117, 227, 132, 37, 15, 109, 7, 204, 244, 18, 250, 246, 173, 234}, 171))
-            bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(217, 64, 64)}):Play()
+          pcall(function()
+            if (((1 + 1) == 2) and (cb and cb.Parent)) then
+              cb.Visible = true
+            end
+          end)
+          pcall(function()
+            bj:Create(gq, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {BackgroundTransparency = 0.78}):Play()
+          end)
+          pcall(function()
+            bj:Create(gr, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {GroupTransparency = 0}):Play()
+          end)
+          pcall(function()
+            bj:Create(gs, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {Scale = 1}):Play()
+          end)
+          pcall(function()
+            jq.Text = mb
+            bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(217, 64, 64)}):Play()
+          end)
+        end
+        local function mc()
+          dn = false
+          y()[cf] = nil
+          pcall(function()
+            if (((15 * 15) == 225) and writefile) then
+              writefile(dd, h({33, 143}, 90))
+            end
+          end)
+        end
+        if (((100 % 7) == 2) and not ((lj and lk))) then
+          if (((12 * 12) == 144) and (ll and string.find(ll, (h({15, 121, 121, 223}, 97) .. h({245, 109, 47, 59, 210}, 134)), 1, true))) then
+            mc()
+            ma(((h({50, 158, 48, 58, 26, 224, 55, 254, 65, 189, 61, 243, 244, 213, 187, 82, 51}, 97) .. h({245, 123, 74, 141, 49, 192, 127, 70, 187, 204, 192, 154, 160, 25, 247, 93, 186, 247}, 134)) .. h({224, 188, 76, 205, 250, 196, 111, 30, 178, 7, 92, 168, 118, 95, 241, 199, 173, 104}, 171)))
+          elseif (((3 ^ 2) == 9) and (ll and ((string.find(ll, (h({4, 117, 164}, 97) .. h({239, 102, 154, 59}, 134)), 1, true) or string.find(ll, (h({12, 124, 142, 50}, 97) .. h({231, 120, 170, 139}, 134)), 1, true))))) then
+            mc()
+            ma(((h({50, 158, 48, 58, 26, 224, 55, 254, 90, 161, 110, 126, 87, 99, 212, 21, 251, 18}, 97) .. h({166, 184, 100, 31, 24, 28, 199, 72, 217, 160, 147, 255, 239, 203, 92, 194, 174, 231}, 134)) .. h({139, 133, 171, 145, 242, 185, 239, 130, 35, 87, 252, 75, 23, 243, 52, 198, 66, 14, 149}, 171)))
+          else
+            ma(((h({45, 155, 125, 66, 79}, 97) .. h({224, 112, 176, 53, 185, 14}, 134)) .. (((ll and ((h({96, 145}, 90) .. string.sub(ll, 1, 60)))) or ((h({65, 229, 134, 197, 121, 94, 236, 218, 17, 67, 164, 222, 250}, 97) .. h({242, 63, 142, 35, 19, 128, 243, 159, 79, 104, 118, 113, 59}, 134)) .. h({206, 61, 148, 89, 194, 58, 111, 43, 15, 33, 75, 54, 249}, 171))))))
           end
           return
         end
-        local lk = kp(lh)
-        local ll = kt((ch .. (h({38}, 90) .. (tostring(bn.UserId) .. (h({38}, 90) .. lg)))), lk)
-        local lm, ln = ((loadstring or load))(ll)
-        if (((15 * 15) == 225) and not lm) then
-          if (((100 % 7) == 2) and (cb and cb.Parent)) then
-            cb.Visible = true
-            bj:Create(go, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {GroupTransparency = 0}):Play()
-            jn.Text = ((h({49, 153, 83, 204, 162, 106, 203, 14, 6, 105, 66, 172}, 97) .. h({244, 51, 218, 165, 113, 223, 169, 130, 42, 236, 56, 229}, 134)) .. h({206, 51, 210, 151, 7, 52, 222, 76, 223, 71, 220, 81, 86}, 171))
-          end
+        local md = ks(lk)
+        local me = kw((ch .. (h({38}, 90) .. (tostring(bn.UserId) .. (h({38}, 90) .. lj)))), md)
+        local mf, mg = ((loadstring or load))(me)
+        if (((7 * 7) == 49) and not mf) then
+          ma(((h({49, 153, 83, 204, 162, 106, 203, 14, 6, 105, 66, 172}, 97) .. h({244, 51, 218, 165, 113, 223, 169, 130, 42, 236, 56, 229}, 134)) .. h({206, 51, 210, 151, 7, 52, 222, 76, 223, 71, 220, 81, 86}, 171)))
           return
         end
-        pcall(lm)
+        pcall(mf)
+        task.delay(1.2, function()
+          pcall(function()
+            if (((1 + 1) == 2) and (ev and ev.Parent)) then
+              ev:Destroy()
+            end
+            if (((15 * 15) == 225) and cb) then
+              cb:Destroy()
+            end
+          end)
+        end)
       end)
     end
-    jj.MouseEnter:Connect(function()
-      bj:Create(jj, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = ex}):Play()
+    jm.MouseEnter:Connect(function()
+      bj:Create(jm, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = fa}):Play()
     end)
-    jj.MouseLeave:Connect(function()
-      bj:Create(jj, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = eu}):Play()
+    jm.MouseLeave:Connect(function()
+      bj:Create(jm, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = ex}):Play()
     end)
-    jj.MouseButton1Down:Connect(function()
-      local lo = jj:FindFirstChildOfClass(s(105))
-      if (((12 * 12) == 144) and lo) then
-        bj:Create(lo, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Scale = 0.97}):Play()
+    jm.MouseButton1Down:Connect(function()
+      local mh = jm:FindFirstChildOfClass(s(105))
+      if (((100 % 7) == 2) and mh) then
+        bj:Create(mh, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Scale = 0.97}):Play()
       end
     end)
-    jj.MouseButton1Up:Connect(function()
-      local lp = jj:FindFirstChildOfClass(s(105))
-      if (((3 ^ 2) == 9) and lp) then
-        bj:Create(lp, TweenInfo.new(0.12, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Scale = 1.01}):Play()
+    jm.MouseButton1Up:Connect(function()
+      local mi = jm:FindFirstChildOfClass(s(105))
+      if (((12 * 12) == 144) and mi) then
+        bj:Create(mi, TweenInfo.new(0.12, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Scale = 1.01}):Play()
       end
     end)
-    jj.MouseButton1Click:Connect(function()
+    jm.MouseButton1Click:Connect(function()
       pcall(function()
-        ez.TimePosition = 0
-        ez:Play()
+        fc.TimePosition = 0
+        fc:Play()
       end)
-      if (((7 * 7) == 49) and eo()) then
-        jn.Text = ((h({32, 133, 190, 98, 246}, 97) .. h({226, 118, 195, 32, 180, 111}, 134)) .. h({194, 113, 97, 199, 176, 16}, 171))
-        bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = ex}):Play()
-        task.delay(0.7, lf)
-        return
-      end
-      jn.Text = ((h({34, 131, 185, 37, 5, 203, 8}, 97) .. h({231, 44, 25, 201, 164, 158, 63, 142}, 134)) .. h({196, 61, 153, 132, 185, 47, 83, 223}, 171))
-      bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = ex}):Play()
+      jq.Text = ((h({34, 131, 185, 37, 5, 203, 8}, 97) .. h({231, 44, 25, 201, 164, 158, 63, 142}, 134)) .. h({196, 61, 153, 132, 185, 47, 83, 223}, 171))
+      bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = fa}):Play()
+      kf.Visible = true
+      kk.Visible = false
+      km.Visible = false
+      kd.Text = ((h({34, 164, 240, 41, 236}, 97) .. h({195, 164, 160, 169, 180, 61}, 134)) .. h({238, 211, 138, 254, 5, 23}, 171))
+      ke.Text = ((h({34, 131, 185, 37, 5, 203, 8, 88, 209, 212, 28, 243, 209, 174, 155, 81, 82, 58, 145, 72, 144, 77, 36, 84, 123, 34, 86, 172, 176, 171}, 97) .. h({166, 169, 130, 108, 242, 104, 84, 207, 190, 91, 58, 226, 229, 250, 91, 40, 153, 158, 223, 85, 64, 55, 119, 144, 113, 62, 166, 125, 157, 101, 102}, 134)) .. h({139, 186, 127, 111, 140, 182, 88, 132, 99, 190, 159, 45, 73, 68, 185, 96, 149, 244, 200, 79, 118, 24, 174, 218, 10, 79, 72, 232, 66, 32, 87}, 171))
       kc.Visible = true
-      kh.Visible = false
-      kj.Visible = false
-      ka.Text = ((h({34, 164, 240, 41, 236}, 97) .. h({195, 164, 160, 169, 180, 61}, 134)) .. h({238, 211, 138, 254, 5, 23}, 171))
-      kb.Text = ((h({34, 131, 185, 37, 5, 203, 8, 88, 209, 212, 28, 243, 209, 174, 155, 81, 82, 58, 145, 72, 144, 77, 36, 84, 123, 34, 86, 172, 176, 171}, 97) .. h({166, 169, 130, 108, 242, 104, 84, 207, 190, 91, 58, 226, 229, 250, 91, 40, 153, 158, 223, 85, 64, 55, 119, 144, 113, 62, 166, 125, 157, 101, 102}, 134)) .. h({139, 186, 127, 111, 140, 182, 88, 132, 99, 190, 159, 45, 73, 68, 185, 96, 149, 244, 200, 79, 118, 24, 174, 218, 10, 79, 72, 232, 66, 32, 87}, 171))
-      jz.Visible = true
     end)
-    jk.MouseEnter:Connect(function()
-      bj:Create(jk, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(40, 22, 50)}):Play()
+    jn.MouseEnter:Connect(function()
+      bj:Create(jn, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(40, 22, 50)}):Play()
     end)
-    jk.MouseLeave:Connect(function()
-      bj:Create(jk, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(22, 14, 30)}):Play()
+    jn.MouseLeave:Connect(function()
+      bj:Create(jn, TweenInfo.new(0.12, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(22, 14, 30)}):Play()
     end)
-    jk.MouseButton1Down:Connect(function()
-      local lq = jk:FindFirstChildOfClass(s(105))
-      if (((1 + 1) == 2) and lq) then
-        bj:Create(lq, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Scale = 0.97}):Play()
+    jn.MouseButton1Down:Connect(function()
+      local mj = jn:FindFirstChildOfClass(s(105))
+      if (((3 ^ 2) == 9) and mj) then
+        bj:Create(mj, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Scale = 0.97}):Play()
       end
     end)
-    jk.MouseButton1Up:Connect(function()
-      local lr = jk:FindFirstChildOfClass(s(105))
-      if (((15 * 15) == 225) and lr) then
-        bj:Create(lr, TweenInfo.new(0.12, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Scale = 1.01}):Play()
+    jn.MouseButton1Up:Connect(function()
+      local mk = jn:FindFirstChildOfClass(s(105))
+      if (((7 * 7) == 49) and mk) then
+        bj:Create(mk, TweenInfo.new(0.12, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Scale = 1.01}):Play()
       end
     end)
-    jk.MouseButton1Click:Connect(function()
+    jn.MouseButton1Click:Connect(function()
       pcall(function()
-        ez.TimePosition = 0
-        ez:Play()
+        fc.TimePosition = 0
+        fc:Play()
       end)
-      local ls = ((jh.Text or "")):gsub(h({127, 239, 147}, 90), "")
-      if (((100 % 7) == 2) and (ls == "")) then
-        jn.Text = ((h({49, 153, 89, 238, 206, 51}, 97) .. h({255, 75, 25, 24, 121, 251, 57}, 134)) .. h({210, 7, 84, 172, 191, 125, 162}, 171))
-        bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = ex}):Play()
+      local ml = ((jk.Text or "")):gsub(h({127, 239, 147}, 90), "")
+      if (((1 + 1) == 2) and (ml == "")) then
+        jq.Text = ((h({49, 153, 89, 238, 206, 51}, 97) .. h({255, 75, 25, 24, 121, 251, 57}, 134)) .. h({210, 7, 84, 172, 191, 125, 162}, 171))
+        bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = fa}):Play()
         return
       end
-      jn.Text = ((h({34, 131, 179, 35, 79}, 97) .. h({239, 122, 156, 101, 111}, 134)) .. h({206, 106, 209, 6, 105}, 171))
-      bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = ex}):Play()
-      jl.Text = (h({34, 163, 243, 3, 79}, 97) .. h({207, 186, 188, 11, 28, 163}, 134))
-      local lt, lu, lv = pcall(function()
-        return ei(ls)
+      jq.Text = ((h({34, 131, 179, 35, 79}, 97) .. h({239, 122, 156, 101, 111}, 134)) .. h({206, 106, 209, 6, 105}, 171))
+      bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = fa}):Play()
+      jo.Text = (h({34, 163, 243, 3, 79}, 97) .. h({207, 186, 188, 11, 28, 163}, 134))
+      local mm, mn, mo = pcall(function()
+        return ek(ml)
       end)
-      if (((12 * 12) == 144) and (lt and (lu == true))) then
-        jl.Text = (h({51, 159, 88}, 97) .. h({227, 117, 187}, 134))
-        jn.Text = ((h({32, 170, 224, 252}, 97) .. h({213, 173, 102, 76, 199}, 134)) .. h({234, 161, 140, 120, 181}, 171))
-        bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(61, 187, 74)}):Play()
-        task.delay(0.7, lf)
+      if (((15 * 15) == 225) and (mm and (mn == true))) then
+        jo.Text = (h({51, 159, 88}, 97) .. h({227, 117, 187}, 134))
+        jq.Text = ((h({32, 170, 224, 252}, 97) .. h({213, 173, 102, 76, 199}, 134)) .. h({234, 161, 140, 120, 181}, 171))
+        bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(61, 187, 74)}):Play()
+        task.delay(0.7, li)
       else
-        jl.Text = (h({51, 159, 88}, 97) .. h({227, 117, 187}, 134))
-        local lw = ((h({40, 159, 112, 192, 165, 133, 186, 87, 9, 127, 101, 16, 193}, 97) .. h({214, 137, 53, 229, 253, 118, 60, 224, 157, 244, 166, 130, 238, 123}, 134)) .. h({205, 123, 142, 119, 227, 208, 223, 35, 39, 136, 214, 17, 141, 144}, 171))
-        if (((3 ^ 2) == 9) and not lt) then
-          lw = ((h({50, 148, 32, 236, 81, 16, 216, 47, 81, 194}, 97) .. h({241, 71, 58, 207, 178, 104, 35, 197, 120, 110, 137}, 134)) .. h({139, 154, 133, 77, 198, 10, 40, 240, 48, 183, 112}, 171))
-        elseif (((7 * 7) == 49) and (lu == h({47, 159, 141, 218}, 90))) then
-          lw = ((h({53, 148, 36, 246, 55, 169, 223, 5, 254, 68, 188, 30, 79, 75, 228, 87, 19, 193}, 97) .. h({226, 118, 195, 35, 163, 65, 6, 61, 148, 93, 222, 66, 4, 198, 71, 181, 163, 196}, 134)) .. h({139, 133, 171, 145, 242, 185, 239, 130, 35, 87, 252, 75, 23, 243, 52, 194, 69, 249, 132}, 171))
-        elseif (((1 + 1) == 2) and (lu == (h({4, 117, 164}, 97) .. h({239, 102, 154, 59}, 134)))) then
-          lw = ((h({42, 150, 114, 231, 247, 28, 69, 141, 212, 152, 53, 178, 83}, 97) .. h({214, 137, 53, 229, 253, 118, 60, 224, 157, 244, 166, 130, 238, 123}, 134)) .. h({205, 123, 142, 119, 227, 208, 223, 35, 39, 136, 214, 17, 141, 144}, 171))
-        elseif (((15 * 15) == 225) and (lu == (h({15, 121}, 97) .. h({237, 115, 121}, 134)))) then
-          lw = ((h({42, 150, 114, 231, 252, 2, 31, 66, 169, 127, 149, 248, 237}, 97) .. h({168, 249, 66, 166, 150, 40, 30, 247, 91, 72, 144, 77, 36}, 134)) .. h({205, 102, 144, 4, 109, 72, 113, 125, 46, 243, 103, 235, 89, 36}, 171))
-        elseif (((100 % 7) == 2) and (lu == (h({12, 124, 142, 50}, 97) .. h({231, 120, 170, 139}, 134)))) then
-          lw = ((h({32, 138, 160, 214, 10, 129, 140, 29, 161, 107, 11, 209, 243, 20, 118}, 97) .. h({238, 61, 148, 93, 222, 66, 4, 198, 71, 181, 163, 196, 101, 79, 45}, 134)) .. h({242, 39, 52, 202, 129, 56, 168, 193, 38, 2, 64, 217, 159, 110, 10, 65}, 171))
-        elseif (((12 * 12) == 144) and (lu == (h({15, 115, 116}, 97) .. h({241, 77, 44, 110}, 134)))) then
-          lw = ((h({34, 132, 179, 20, 160, 170, 151, 195, 127, 142, 175, 108, 204, 116, 89, 133, 226}, 97) .. h({168, 249, 83, 220, 48, 218, 24, 177, 97, 77, 43, 122, 139, 167, 98, 183, 175, 158}, 134)) .. h({197, 121, 94, 187, 63, 154, 127, 2, 123, 172, 252, 61, 141, 177, 35, 89, 212, 171}, 171))
+        jo.Text = (h({51, 159, 88}, 97) .. h({227, 117, 187}, 134))
+        local mp = ((h({40, 159, 112, 192, 165, 133, 186, 87, 9, 127, 101, 16, 193}, 97) .. h({214, 137, 53, 229, 253, 118, 60, 224, 157, 244, 166, 130, 238, 123}, 134)) .. h({205, 123, 142, 119, 227, 208, 223, 35, 39, 136, 214, 17, 141, 144}, 171))
+        if (((100 % 7) == 2) and not mm) then
+          mp = ((h({50, 148, 32, 236, 81, 16, 216, 47, 81, 194}, 97) .. h({241, 71, 58, 207, 178, 104, 35, 197, 120, 110, 137}, 134)) .. h({139, 154, 133, 77, 198, 10, 40, 240, 48, 183, 112}, 171))
+        elseif (((12 * 12) == 144) and (mn == h({47, 159, 141, 218}, 90))) then
+          mp = ((h({53, 148, 36, 246, 55, 169, 223, 5, 254, 68, 188, 30, 79, 75, 228, 87, 19, 193}, 97) .. h({226, 118, 195, 35, 163, 65, 6, 61, 148, 93, 222, 66, 4, 198, 71, 181, 163, 196}, 134)) .. h({139, 133, 171, 145, 242, 185, 239, 130, 35, 87, 252, 75, 23, 243, 52, 194, 69, 249, 132}, 171))
+        elseif (((3 ^ 2) == 9) and (mn == (h({4, 117, 164}, 97) .. h({239, 102, 154, 59}, 134)))) then
+          mp = ((h({42, 150, 114, 231, 247, 28, 69, 141, 212, 152, 53, 178, 83}, 97) .. h({214, 137, 53, 229, 253, 118, 60, 224, 157, 244, 166, 130, 238, 123}, 134)) .. h({205, 123, 142, 119, 227, 208, 223, 35, 39, 136, 214, 17, 141, 144}, 171))
+        elseif (((7 * 7) == 49) and (mn == (h({15, 121}, 97) .. h({237, 115, 121}, 134)))) then
+          mp = ((h({42, 150, 114, 231, 252, 2, 31, 66, 169, 127, 149, 248, 237}, 97) .. h({168, 249, 66, 166, 150, 40, 30, 247, 91, 72, 144, 77, 36}, 134)) .. h({205, 102, 144, 4, 109, 72, 113, 125, 46, 243, 103, 235, 89, 36}, 171))
+        elseif (((1 + 1) == 2) and (mn == (h({12, 124, 142, 50}, 97) .. h({231, 120, 170, 139}, 134)))) then
+          mp = ((h({32, 138, 160, 214, 10, 129, 140, 29, 161, 107, 11, 209, 243, 20, 118}, 97) .. h({238, 61, 148, 93, 222, 66, 4, 198, 71, 181, 163, 196, 101, 79, 45}, 134)) .. h({242, 39, 52, 202, 129, 56, 168, 193, 38, 2, 64, 217, 159, 110, 10, 65}, 171))
+        elseif (((15 * 15) == 225) and (mn == (h({15, 115, 116}, 97) .. h({241, 77, 44, 110}, 134)))) then
+          mp = ((h({34, 132, 179, 20, 160, 170, 151, 195, 127, 142, 175, 108, 204, 116, 89, 133, 226}, 97) .. h({168, 249, 83, 220, 48, 218, 24, 177, 97, 77, 43, 122, 139, 167, 98, 183, 175, 158}, 134)) .. h({197, 121, 94, 187, 63, 154, 127, 2, 123, 172, 252, 61, 141, 177, 35, 89, 212, 171}, 171))
         end
-        jn.Text = lw
-        bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(217, 64, 64)}):Play()
+        jq.Text = mp
+        bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(217, 64, 64)}):Play()
       end
     end)
     task.defer(function()
-      if (((3 ^ 2) == 9) and not cb.Parent) then
+      if (((100 % 7) == 2) and not cb.Parent) then
         return
       end
-      if (((7 * 7) == 49) and eo()) then
-        jn.Text = ((h({55, 155, 42, 178, 1, 81, 151}, 97) .. h({226, 46, 171, 162, 174, 126, 173}, 134)) .. h({200, 121, 137, 228, 82, 245, 2, 77}, 171))
-        bj:Create(jn, TweenInfo.new(0.3), {TextColor3 = ex}):Play()
-        task.delay(0.7, lf)
-        return
-      end
-      bj:Create(gn, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {BackgroundTransparency = 0.78}):Play()
-      bj:Create(go, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {GroupTransparency = 0}):Play()
-      bj:Create(gp, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {Scale = 1}):Play()
-      if (((1 + 1) == 2) and not es) then
-        es = Instance.new((h({35, 134, 166, 73, 85}, 97) .. h({224, 119, 187, 27, 216}, 134)))
-        es.Size = 24
-        es.Name = ((h({34, 174, 255, 119}, 97) .. h({213, 170, 14, 122}, 134)) .. h({244, 79, 210, 202, 253}, 171))
-        es.Parent = game:GetService((h({45, 157, 113, 106}, 97) .. h({242, 118, 45, 35}, 134)))
+      task.spawn(function()
+        local mq, mr = pcall(function()
+          return dp((((h({26, 1, 122, 126, 170, 211, 194}, 97) .. h({164, 247, 244, 139, 81, 192, 125}, 134)) .. h({137, 165, 79, 16, 179, 32, 211}, 171)) .. (tostring(bn.UserId) .. ((h({67, 230, 145, 96, 192}, 97) .. h({245, 118, 25, 250, 89}, 134)) .. (cv(ch) .. h({120, 228}, 90))))))
+        end)
+        if (((12 * 12) == 144) and ((mq and mr) and string.find(mr, ((h({67, 165, 157, 4, 8}, 97) .. h({245, 52, 199, 3, 67}, 134)) .. h({129, 172, 47, 139, 13}, 171)), 1))) then
+          local ms = string.match(mr, ((h({67, 185, 159, 79, 107, 117, 65, 220, 18}, 97) .. h({239, 112, 211, 159, 79, 50, 233, 37, 85}, 134)) .. h({129, 250, 35, 45, 200, 91, 47, 87, 185, 56}, 171)))
+          if (((3 ^ 2) == 9) and (ms and (#ms > 8))) then
+            ch = ms
+            dn = true
+            local mt = {uid = tostring(bn.UserId), at = os.time(), hash = ch}
+            ea(mt)
+            jq.Text = ((h({55, 155, 42, 178, 1, 81, 151}, 97) .. h({226, 46, 171, 162, 174, 126, 173}, 134)) .. h({200, 121, 137, 228, 82, 245, 2, 77}, 171))
+            bj:Create(jq, TweenInfo.new(0.3), {TextColor3 = fa}):Play()
+            task.delay(0.7, li)
+            return
+          end
+        end
+      end)
+      bj:Create(gq, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {BackgroundTransparency = 0.78}):Play()
+      bj:Create(gr, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {GroupTransparency = 0}):Play()
+      bj:Create(gs, TweenInfo.new(0.2, Enum.EasingStyle.Quint), {Scale = 1}):Play()
+      if (((7 * 7) == 49) and not ev) then
+        ev = Instance.new((h({35, 134, 166, 73, 85}, 97) .. h({224, 119, 187, 27, 216}, 134)))
+        ev.Size = 24
+        ev.Name = ((h({34, 174, 255, 119}, 97) .. h({213, 170, 14, 122}, 134)) .. h({244, 79, 210, 202, 253}, 171))
+        ev.Parent = game:GetService((h({45, 157, 113, 106}, 97) .. h({242, 118, 45, 35}, 134)))
       end
     end)
-    local lx, ly, lz = false, nil, nil
-    iw.InputBegan:Connect(function(ma)
-      if (((15 * 15) == 225) and ((ma.UserInputType == Enum.UserInputType.MouseButton1) or (ma.UserInputType == Enum.UserInputType.Touch))) then
-        lx = true
-        ly = ma.Position
-        lz = go.Position
+    local mu, mv, mw = false, nil, nil
+    iz.InputBegan:Connect(function(mx)
+      if (((1 + 1) == 2) and ((mx.UserInputType == Enum.UserInputType.MouseButton1) or (mx.UserInputType == Enum.UserInputType.Touch))) then
+        mu = true
+        mv = mx.Position
+        mw = gr.Position
       end
     end)
-    bh.InputEnded:Connect(function(mb)
-      if (((100 % 7) == 2) and ((mb.UserInputType == Enum.UserInputType.MouseButton1) or (mb.UserInputType == Enum.UserInputType.Touch))) then
-        lx = false
+    bh.InputEnded:Connect(function(my)
+      if (((15 * 15) == 225) and ((my.UserInputType == Enum.UserInputType.MouseButton1) or (my.UserInputType == Enum.UserInputType.Touch))) then
+        mu = false
       end
     end)
-    bh.InputChanged:Connect(function(mc)
-      if (((12 * 12) == 144) and (lx and (((mc.UserInputType == Enum.UserInputType.MouseMovement) or (mc.UserInputType == Enum.UserInputType.Touch))))) then
-        local md = (mc.Position - ly)
-        go.Position = UDim2.new(lz.X.Scale, (lz.X.Offset + md.X), lz.Y.Scale, (lz.Y.Offset + md.Y))
+    bh.InputChanged:Connect(function(mz)
+      if (((100 % 7) == 2) and (mu and (((mz.UserInputType == Enum.UserInputType.MouseMovement) or (mz.UserInputType == Enum.UserInputType.Touch))))) then
+        local na = (mz.Position - mv)
+        gr.Position = UDim2.new(mw.X.Scale, (mw.X.Offset + na.X), mw.Y.Scale, (mw.Y.Offset + na.Y))
       end
     end)
   end
-  local function me(mf, mg, mh, mi)
-    for mj = 1, (mi or 8) do
-      local mk = Instance.new((h({39, 156}, 97) .. h({231, 97, 167}, 134)))
-      local ml = math.random(2, 5)
-      mk.Size = UDim2.fromOffset(ml, ml)
-      mk.AnchorPoint = Vector2.new(0.5, 0.5)
-      mk.Position = UDim2.fromOffset(mf, mg)
-      mk.BackgroundColor3 = mh[math.random(#mh)]
-      mk.BorderSizePixel = 0
-      mk.ZIndex = 50
-      mk.Parent = cb
-      Instance.new((h({52, 180, 118, 216}, 97) .. h({244, 115, 95, 142}, 134)), mk).CornerRadius = UDim.new(1, 0)
-      local mm = ((math.random() * math.pi) * 2)
-      local mn = (26 + (math.random() * 34))
-      local mo = (mf + (math.cos(mm) * mn))
-      local mp = (mg + (math.sin(mm) * mn))
-      bj:Create(mk, TweenInfo.new((0.4 + (math.random() * 0.2)), Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Position = UDim2.fromOffset(mo, mp), BackgroundTransparency = 1}):Play()
+  function Sparks(nb, nc, nd, ne)
+    for nf = 1, (ne or 8) do
+      local ng = Instance.new((h({39, 156}, 97) .. h({231, 97, 167}, 134)))
+      local nh = math.random(2, 5)
+      ng.Size = UDim2.fromOffset(nh, nh)
+      ng.AnchorPoint = Vector2.new(0.5, 0.5)
+      ng.Position = UDim2.fromOffset(nb, nc)
+      ng.BackgroundColor3 = nd[math.random(#nd)]
+      ng.BorderSizePixel = 0
+      ng.ZIndex = 50
+      ng.Parent = cb
+      Instance.new((h({52, 180, 118, 216}, 97) .. h({244, 115, 95, 142}, 134)), ng).CornerRadius = UDim.new(1, 0)
+      local ni = ((math.random() * math.pi) * 2)
+      local nj = (26 + (math.random() * 34))
+      local nk = (nb + (math.cos(ni) * nj))
+      local nl = (nc + (math.sin(ni) * nj))
+      bj:Create(ng, TweenInfo.new((0.4 + (math.random() * 0.2)), Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Position = UDim2.fromOffset(nk, nl), BackgroundTransparency = 1}):Play()
       task.delay(0.7, function()
-        if (((3 ^ 2) == 9) and (mk and mk.Parent)) then
-          mk:Destroy()
+        if (((12 * 12) == 144) and (ng and ng.Parent)) then
+          ng:Destroy()
         end
       end)
     end
   end
-  local function mq(mr, ms)
-    if (((7 * 7) == 49) and (not mr or not mr.Parent)) then
+  function FlashRing(nm, nn)
+    if (((3 ^ 2) == 9) and (not nm or not nm.Parent)) then
       return
     end
-    local mt = Instance.new((h({39, 156}, 97) .. h({231, 97, 167}, 134)))
-    mt.Size = UDim2.fromOffset(20, 20)
-    mt.AnchorPoint = Vector2.new(0.5, 0.5)
-    mt.Position = UDim2.new(0.5, 0, 0.5, 0)
-    mt.BackgroundColor3 = ms
-    mt.BackgroundTransparency = 0.6
-    mt.BorderSizePixel = 0
-    mt.Parent = mr
-    Instance.new((h({52, 180, 118, 216}, 97) .. h({244, 115, 95, 142}, 134)), mt).CornerRadius = UDim.new(1, 0)
-    bj:Create(mt, TweenInfo.new(0.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.new(2, 0, 2, 0), BackgroundTransparency = 1}):Play()
+    local no = Instance.new((h({39, 156}, 97) .. h({231, 97, 167}, 134)))
+    no.Size = UDim2.fromOffset(20, 20)
+    no.AnchorPoint = Vector2.new(0.5, 0.5)
+    no.Position = UDim2.new(0.5, 0, 0.5, 0)
+    no.BackgroundColor3 = nn
+    no.BackgroundTransparency = 0.6
+    no.BorderSizePixel = 0
+    no.Parent = nm
+    Instance.new((h({52, 180, 118, 216}, 97) .. h({244, 115, 95, 142}, 134)), no).CornerRadius = UDim.new(1, 0)
+    bj:Create(no, TweenInfo.new(0.35, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.new(2, 0, 2, 0), BackgroundTransparency = 1}):Play()
     task.delay(0.4, function()
-      if (((1 + 1) == 2) and (mt and mt.Parent)) then
-        mt:Destroy()
+      if (((7 * 7) == 49) and (no and no.Parent)) then
+        no:Destroy()
       end
     end)
   end
 end)
-if (((15 * 15) == 225) and not mu) then
+if (((1 + 1) == 2) and not np) then
   y()[o] = nil
   y()[p] = nil
-  ax(((h({8, 127, 143, 192, 65, 173}, 97) .. h({244, 111, 81, 80, 91, 194}, 134)) .. tostring(mv)))
+  ax(((h({8, 127, 143, 192, 65, 173}, 97) .. h({244, 111, 81, 80, 91, 194}, 134)) .. tostring(nq)))
 end
